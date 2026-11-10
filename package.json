@@ -1,0 +1,9 @@
+{
+  "name": "activemur-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing de captación de leads para Activemur (tratamiento de agua y purificación de aire)",
+  "scripts": {
+    "dev": "node dev-server.js"
+  }
+}
