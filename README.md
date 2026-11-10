@@ -5,13 +5,22 @@ formulario de **dos pasos que cualifica el lead** antes de enviarlo.
 
 ```
 index.html            toda la página (HTML + CSS + JS, sin dependencias)
-media/                vídeo, póster y fotos de producto
-fonts/                Inter (woff2, servida local)
+media/                7 fotos reales extraídas de activemur.es
+fonts/                Manrope + Inter (woff2, servidas en local)
 api/lead.js           endpoint del formulario (solo en Vercel/Netlify)
 vercel.json           cabeceras de caché y seguridad
 dev-server.js         servidor local con el endpoint incluido (npm run dev)
 .nojekyll             necesario en GitHub Pages
 ```
+
+### Diseño (según la guía del cliente)
+
+- **Paleta:** azul `#086B9B`, verde agua `#31A58D`, azul muy claro `#EDF7FA`, azul oscuro `#173448`.
+- **Tipografía:** Manrope (400–800), servida en local.
+- **Bloques:** hero a dos columnas · situación actual (3 tarjetas) · 5 soluciones ·
+  prueba social · 3 pasos · servicio técnico · FAQ · cierre con formulario.
+- **CTA único:** «Solicita asesoramiento» en todos los puntos de conversión.
+- Sin vídeo: solo fotografía, para mantener el peso bajo (≈220 KB de imágenes).
 
 Las rutas son **relativas**, así que el sitio funciona igual en la raíz de un dominio
 (Vercel) que en una subcarpeta (`usuario.github.io/repo/`, GitHub Pages).
@@ -64,16 +73,18 @@ y el destinatario tiene que ser el email de la cuenta de Resend.
 
 ## Qué hace el formulario
 
-**Paso 1 (cualificación):** para quién es · qué quiere mejorar · cuándo lo necesita.
-**Paso 2 (contacto):** localidad, CP, dónde se instala, nombre, teléfono, email y consentimiento.
+Una sola pantalla, como pide la guía: **nombre, teléfono, localidad, solución de interés
+y mensaje opcional**, más consentimiento RGPD. Sin pasos que hagan abandonar.
 
-Reglas de filtrado:
+El selector de solución (`Ósmosis`, `Descalcificación`, `Fuentes`, `Enfriamiento /
+hidrogenación`, `Aire y limpieza`, `Asesoramiento general`) permite saber de antemano qué
+necesita el lead. Cada solicitud llega con una **temperatura** (`caliente` / `templado`)
+calculada en el servidor según la solución elegida y la longitud del mensaje, y aparece en
+el asunto del email para priorizar la llamada.
 
-- «Solo estoy informándome» → pide **email en vez de teléfono** y la confirmación dice
-  que se enviará información sin llamar. No consume tiempo de comercial.
-- «Empresa» o «ambas» → aparece el campo de número de personas.
-- Cada lead sale con una **temperatura** (`caliente` / `templado` / `frio`) calculada en
-  el servidor, para priorizar la llamada. El asunto del email la incluye.
+Si el sitio se sirve como estático (GitHub Pages) no hay endpoint: el formulario detecta
+el fallo y ofrece **enviar la misma solicitud por email con los datos ya rellenados**, o
+llamar por teléfono.
 
 ## Eventos de medición
 
