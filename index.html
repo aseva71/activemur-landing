@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Activemur — Tratamiento de agua y purificación de aire en Murcia</title>
-<meta name="description" content="Ósmosis inversa, fuentes de agua, descalcificadores y purificación de aire para hogares y empresas. Más de 25 años de experiencia en Murcia. Solicita asesoramiento sin compromiso.">
+<meta name="description" content="Más de 25 años cuidando hogares y empresas. Ósmosis inversa, fuentes de agua, descalcificadores y purificación del aire. Solicita asesoramiento sin compromiso.">
 <link rel="canonical" href="https://activemur.es/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mejora el agua que bebes y el aire que respiras — Activemur">
-<meta property="og:description" content="Más de 25 años cuidando hogares y empresas. Únete al ahorro saludable.">
+<meta property="og:description" content="Únete al ahorro saludable. Más de 25 años cuidando hogares y empresas.">
 <meta property="og:image" content="media/hero-producto.jpg">
 <meta property="og:locale" content="es_ES">
 <meta name="theme-color" content="#EDF7FA">
@@ -20,7 +20,7 @@
   "@type": "LocalBusiness",
   "name": "Activemur",
   "slogan": "Únete al ahorro saludable",
-  "description": "Sistemas de tratamiento de agua y purificación de aire para hogares y empresas. Más de 25 años de experiencia.",
+  "description": "Soluciones de tratamiento de agua y purificación del aire para hogares y empresas.",
   "url": "https://activemur.es/",
   "telephone": "+34968237316",
   "email": "administracion@activemur.es",
@@ -36,7 +36,6 @@
 }
 </script>
 <style>
-/* ============ Tokens ============ */
 :root{
   --azul:#086B9B;
   --azul-hondo:#065578;
@@ -54,13 +53,13 @@
   --radio-g:26px;
   --wrap:1180px;
   --gut:clamp(20px,4vw,40px);
-  --sec:clamp(64px,8vw,112px);
+  --sec:clamp(60px,7.5vw,104px);
   --sombra:0 22px 60px -34px rgba(23,52,72,.35);
   --sombra-s:0 10px 30px -18px rgba(23,52,72,.3);
   --ease:cubic-bezier(.22,.68,.32,1);
   --fs-h1:clamp(2.1rem,3.4vw,3.05rem);
-  --fs-h2:clamp(1.7rem,3.1vw,2.6rem);
-  --fs-h3:clamp(1.05rem,1.5vw,1.28rem);
+  --fs-h2:clamp(1.65rem,2.9vw,2.45rem);
+  --fs-h3:clamp(1.02rem,1.4vw,1.22rem);
   --fuente:"Manrope","Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
 @font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url("fonts/manrope-latin.woff2") format("woff2")}
@@ -72,7 +71,7 @@ html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   margin:0;font-family:var(--fuente);background:var(--blanco);color:var(--body);
-  font-size:clamp(1rem,1.05vw,1.06rem);line-height:1.62;font-weight:450;
+  font-size:clamp(1rem,1.05vw,1.06rem);line-height:1.68;font-weight:450;
   -webkit-font-smoothing:antialiased;text-wrap:pretty;overflow-x:clip;
 }
 img{max-width:100%;display:block}
@@ -88,29 +87,30 @@ summary::-webkit-details-marker{display:none}
 .eyebrow{display:inline-flex;align-items:center;gap:.6em;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--azul)}
 .eyebrow--claro{color:#8fc7dd}
 .h1{font-size:var(--fs-h1);line-height:1.04;letter-spacing:-.033em;font-weight:750;color:var(--ink);text-wrap:balance}
+.h2{font-size:var(--fs-h2);line-height:1.14;letter-spacing:-.026em;font-weight:720;color:var(--ink)}
+.h3{font-size:var(--fs-h3);line-height:1.3;letter-spacing:-.015em;font-weight:700;color:var(--ink)}
+.lead{font-size:1.04em}
+.small{font-size:.85rem;color:var(--muted)}
 .br-wide{display:none}
 @media(min-width:900px){.br-wide{display:block}}
-.h2{font-size:var(--fs-h2);line-height:1.1;letter-spacing:-.028em;font-weight:720;color:var(--ink)}
-.h3{font-size:var(--fs-h3);line-height:1.28;letter-spacing:-.015em;font-weight:700;color:var(--ink)}
-.lead{color:var(--body);font-size:1.04em}
-.small{font-size:.85rem;color:var(--muted)}
 
-/* ============ Botones ============ */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:0 1.7em;
   border-radius:999px;border:1.5px solid transparent;background:var(--azul);color:#fff;
-  font-weight:700;font-size:.96rem;letter-spacing:-.005em;text-decoration:none;cursor:pointer;
+  font-weight:700;font-size:.96rem;text-decoration:none;cursor:pointer;
   transition:background .22s,transform .22s var(--ease),box-shadow .22s;box-shadow:0 8px 22px -14px rgba(8,107,155,.9)
 }
 .btn:hover{background:var(--azul-hondo);transform:translateY(-1px);box-shadow:0 12px 26px -14px rgba(8,107,155,.95)}
 .btn:active{transform:none}
 .btn--linea{background:transparent;color:var(--azul);border-color:var(--linea-2);box-shadow:none}
 .btn--linea:hover{background:var(--claro);border-color:var(--azul);transform:none;box-shadow:none}
+.btn--blanco{background:#fff;color:var(--azul)}
+.btn--blanco:hover{background:var(--claro)}
 .btn--sm{min-height:44px;padding:0 1.25em;font-size:.88rem}
 .ico{width:18px;height:18px;flex:none}
 
-/* ============ Header ============ */
-.hd{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.93);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+/* Header */
+.hd{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
 .hd.scrolled{border-bottom-color:var(--linea)}
 .hd__in{max-width:var(--wrap);margin-inline:auto;padding:0 var(--gut);height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex:none}
@@ -118,7 +118,7 @@ summary::-webkit-details-marker{display:none}
 .logo__mark svg{width:19px;height:19px}
 .logo__txt{display:block;font-size:1.22rem;font-weight:800;letter-spacing:-.045em;color:var(--ink);line-height:1.1}
 .logo__tag{display:block;font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.nav{display:flex;gap:1.7rem;font-size:.9rem;font-weight:600}
+.nav{display:flex;gap:1.6rem;font-size:.9rem;font-weight:600}
 .nav a{text-decoration:none;color:var(--body);padding-block:6px;position:relative}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;border-radius:2px;background:var(--verde);transform:scaleX(0);transform-origin:left;transition:transform .28s var(--ease)}
 .nav a:hover,.nav a[aria-current="true"]{color:var(--ink)}
@@ -132,17 +132,19 @@ summary::-webkit-details-marker{display:none}
 .burg span::before{top:-5px}.burg span::after{top:5px}
 .mnav{display:none}
 
-/* ============ 01 Hero ============ */
-.hero{background:linear-gradient(178deg,var(--claro) 0%,#f8fcfd 62%,#fff 100%);padding-block:clamp(28px,4.5vw,64px) clamp(44px,6vw,84px);overflow:hidden}
-.hero__in{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,.78fr);gap:clamp(28px,4vw,56px);align-items:center}
+/* Hero */
+.hero{background:linear-gradient(178deg,var(--claro) 0%,#f8fcfd 62%,#fff 100%);padding-block:clamp(26px,4.2vw,58px) clamp(40px,5.5vw,76px);overflow:hidden}
+.hero__in{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(26px,4vw,56px);align-items:center}
 .badge{display:inline-flex;align-items:center;gap:.55em;background:#fff;border:1px solid var(--linea);color:var(--ink);font-size:.76rem;font-weight:700;padding:.45em .9em;border-radius:999px;box-shadow:var(--sombra-s)}
 .badge__dot{width:7px;height:7px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 3px rgba(49,165,141,.18)}
-.hero h1{margin:1.1rem 0 .9rem}
+.hero h1{margin:1rem 0 .7rem}
 .hero h1 em{font-style:normal;color:var(--azul);white-space:nowrap;position:relative}
 .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.1em;border-radius:3px;background:var(--verde);opacity:.4}
-.hero__lead{font-size:clamp(1rem,1.3vw,1.12rem);max-width:44ch}
-.hero__actions{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1rem;margin-top:1.7rem}
-.hero__trust{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1.6rem;font-size:.84rem;color:var(--body);font-weight:600}
+.hero__sub{font-size:clamp(1rem,1.25vw,1.12rem);font-weight:700;color:var(--ink);margin-bottom:.7em}
+.hero__copy p{font-size:clamp(.97rem,1.2vw,1.05rem);margin-bottom:.55em;max-width:52ch}
+.hero__copy p:last-child{margin-bottom:0}
+.hero__actions{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1rem;margin-top:1.6rem}
+.hero__trust{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1.5rem;font-size:.84rem;color:var(--body);font-weight:600}
 .hero__trust span{display:flex;align-items:center;gap:.45em}
 .hero__trust svg{width:16px;height:16px;color:var(--verde);flex:none}
 .hero__media{position:relative}
@@ -154,115 +156,141 @@ summary::-webkit-details-marker{display:none}
 .hero__card p{font-size:.76rem;font-weight:750;color:var(--ink);line-height:1.28}
 .hero__card > span:last-child{font-size:.68rem;color:var(--muted);font-weight:650;grid-column:2}
 
-/* ============ Franja ============ */
-.strip{background:#fff;border-bottom:1px solid var(--linea)}
+/* Franja */
+.strip{background:#fff;border-block:1px solid var(--linea)}
 .strip__in{max-width:var(--wrap);margin-inline:auto;padding:16px var(--gut);display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
 .strip div{display:flex;align-items:center;gap:.55em;font-size:.82rem;font-weight:650;color:var(--ink);min-width:0}
 .strip svg{width:16px;height:16px;color:var(--verde);flex:none}
 
-/* ============ Secciones ============ */
+/* Secciones */
 .sec{padding-block:var(--sec)}
 .sec--claro{background:var(--claro-2);border-block:1px solid var(--linea)}
-.sec__head{max-width:58ch;margin-bottom:clamp(30px,4vw,48px)}
-.sec__head .h2{margin:.5em 0 .6em}
+.sec__head{max-width:62ch;margin-bottom:clamp(26px,3.4vw,42px)}
+.sec__head .h2{margin:.5em 0 .7em}
 .sec__head--centro{text-align:center;margin-inline:auto}
+.prosa p{margin-bottom:.85em}
+.prosa p:last-child{margin-bottom:0}
 
 /* 02 · Situación */
-.probs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
-.prob{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:clamp(20px,2.6vw,30px);box-shadow:var(--sombra-s)}
-.prob__ico{width:48px;height:48px;border-radius:14px;background:var(--claro);display:grid;place-items:center;margin-bottom:1.1em}
-.prob__ico svg{width:24px;height:24px;color:var(--azul)}
-.prob h3{margin-bottom:.4em}
-.prob p{font-size:.93rem}
-.probs__cierre{margin-top:clamp(24px,3vw,34px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
-.probs__cierre p{font-weight:700;color:var(--ink);font-size:clamp(1.02rem,1.5vw,1.18rem);letter-spacing:-.015em;max-width:54ch}
+.gestos{border-top:1px solid var(--ink);margin:clamp(24px,3vw,38px) 0 clamp(20px,2.6vw,30px)}
+.gestos li{border-bottom:1px solid var(--linea);padding-block:clamp(9px,1.3vw,15px);font-size:clamp(1.2rem,2.2vw,1.72rem);letter-spacing:-.028em;font-weight:560;line-height:1.15;color:var(--ink);display:flex;align-items:center;gap:clamp(12px,1.6vw,20px)}
+.gestos li::before{content:"";width:clamp(14px,1.6vw,22px);height:1px;background:var(--linea-2);flex:none}
+.situaciones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,3vw,44px);border-top:1px solid var(--linea);margin-top:.4em}
+.situaciones li{display:grid;grid-template-columns:2em 1fr;gap:.7em;align-items:baseline;padding-block:.8em;border-bottom:1px solid var(--linea);font-size:.95rem;line-height:1.55}
+.situaciones b{font-size:.72rem;font-weight:700;color:var(--azul);font-variant-numeric:tabular-nums}
+.preguntas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:clamp(26px,3.4vw,40px);border-top:1px solid var(--linea)}
+.preguntas li{padding:clamp(14px,2vw,22px) clamp(14px,2vw,24px) clamp(14px,2vw,22px) 0;border-bottom:1px solid var(--linea);font-size:clamp(1rem,1.5vw,1.28rem);letter-spacing:-.02em;font-weight:560;line-height:1.25;color:var(--ink)}
+.preguntas li:nth-child(odd){border-right:1px solid var(--linea);padding-right:clamp(18px,2.4vw,32px)}
+.preguntas li:nth-child(even){padding-left:clamp(18px,2.4vw,32px)}
 
-/* 03 · Soluciones */
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,24px)}
-.card{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s,border-color .25s}
-.card:hover{transform:translateY(-3px);box-shadow:var(--sombra);border-color:var(--linea-2)}
-.card__media{aspect-ratio:4/3;background:linear-gradient(180deg,#fbfdfe,#eef7fa);display:grid;place-items:center;overflow:hidden}
-.card__media img{width:100%;height:100%;object-fit:contain;padding:16px;transition:transform .5s var(--ease)}
-.card:hover .card__media img{transform:scale(1.03)}
-.card__media--foto img{object-fit:cover;padding:0}
-.card__body{padding:clamp(18px,2.2vw,24px);display:flex;flex-direction:column;flex:1}
-.card__kicker{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--verde);margin-bottom:.5em}
-.card h3{margin-bottom:.4em}
-.card p{font-size:.91rem;flex:1}
-.card__link{margin-top:1.1em;display:inline-flex;align-items:center;gap:.4em;font-size:.87rem;font-weight:700;color:var(--azul);text-decoration:none}
-.card__link svg{width:15px;height:15px;transition:transform .25s var(--ease)}
-.card:hover .card__link svg{transform:translateX(3px)}
-.card--ancha{grid-column:span 2;flex-direction:row}
-.card--ancha .card__media{flex:0 0 40%;aspect-ratio:auto}
-.card--ancha .card__body{justify-content:center;padding:clamp(20px,2.6vw,30px)}
-.card--ancha .card__body p{flex:0 0 auto}
-.card--ancha .card__link{margin-top:.9em}
+/* Banda problema real */
+.band{background:var(--oscuro);color:#cfe3ec;padding-block:clamp(52px,6.5vw,92px)}
+.band .eyebrow{color:#8fc7dd}
+.band__claim{font-size:clamp(1.35rem,2.9vw,2.3rem);line-height:1.22;letter-spacing:-.028em;font-weight:500;max-width:34ch;margin-top:.6em}
+.band__claim strong{font-weight:750;color:#fff}
+.band__cierre{margin-top:clamp(24px,3vw,40px);padding-top:clamp(20px,2.6vw,30px);border-top:1px solid rgba(255,255,255,.16);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.3em clamp(20px,4vw,50px);max-width:820px;font-size:.99rem;color:#b6cfdb}
+.band__cierre em{font-style:normal;color:#fff;font-weight:650}
 
-/* 04 · Prueba social */
+/* 03 · Soluciones en filas */
+.intro-sol{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(26px,4vw,64px);align-items:start}
+.solrows{margin-top:clamp(32px,4vw,52px);border-top:1px solid var(--ink)}
+.solrow{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(20px,3.4vw,48px);padding-block:clamp(26px,3.4vw,46px);border-bottom:1px solid var(--linea);align-items:start}
+.solrow:nth-child(even) .solrow__media{order:2}
+.solrow__media{border-radius:var(--radio);overflow:hidden;background:linear-gradient(180deg,#fbfdfe,#eef7fa);border:1px solid var(--linea);aspect-ratio:4/3;display:grid;place-items:center}
+.solrow__media img{width:100%;height:100%;object-fit:contain;padding:14px}
+.solrow__media--foto img{object-fit:cover;padding:0}
+.solrow__num{font-size:.72rem;font-weight:800;letter-spacing:.12em;color:var(--verde);margin-bottom:.6em}
+.solrow h3{margin-bottom:.5em}
+.solrow__kicker{font-size:.95rem;font-weight:700;color:var(--azul);margin-bottom:.9em;letter-spacing:-.01em}
+.solrow__body p{margin-bottom:.7em;font-size:.97rem;max-width:58ch}
+.solrow__body .solrow__kicker{max-width:none}
+.solrow__body p:last-child{margin-bottom:0}
+.solrow__bullets{margin-top:.8em;display:grid;gap:.45em;font-size:.95rem}
+.solrow__bullets li{display:grid;grid-template-columns:14px 1fr;gap:.6em;align-items:baseline}
+.solrow__bullets li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent,var(--azul));position:relative;top:-3px}
+
+/* Diferencia */
+.dif{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink);margin-top:clamp(26px,3.2vw,40px)}
+.dif > div{padding:clamp(18px,2.4vw,30px) clamp(16px,2vw,26px) clamp(20px,2.6vw,32px) 0;border-bottom:1px solid var(--linea)}
+.dif > div:not(:nth-child(3n)){border-right:1px solid var(--linea);padding-right:clamp(18px,2.4vw,30px)}
+.dif > div:not(:nth-child(3n+1)){padding-left:clamp(18px,2.4vw,30px)}
+.dif h3{font-size:1.01rem;font-weight:700;letter-spacing:-.012em;margin-bottom:.4em}
+.dif p{font-size:.92rem;line-height:1.55}
+
+/* 04 · Prueba */
 .prueba{background:var(--oscuro);color:#cfe3ec;padding-block:var(--sec)}
 .prueba .h2{color:#fff}
-.prueba__grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(28px,4.5vw,64px);align-items:start}
-.anos{font-size:clamp(3.4rem,8vw,5.8rem);line-height:.9;letter-spacing:-.05em;font-weight:800;color:#fff;margin:.2em 0 .1em}
-.anos span{color:var(--verde)}
-.prueba__stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.3rem 2rem;margin-top:2rem;border-top:1px solid rgba(255,255,255,.16);padding-top:1.6rem}
-.prueba__stats dt{font-size:1rem;font-weight:800;color:#fff}
-.prueba__stats dd{font-size:.84rem;color:#a9c6d3;margin-top:.15em}
-.testi{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radio);padding:clamp(22px,3vw,32px)}
-.testi blockquote p{font-size:clamp(1rem,1.45vw,1.18rem);line-height:1.55;color:#fff}
-.testi blockquote p::before{content:"«";color:var(--verde);margin-right:.1em}
-.testi blockquote p::after{content:"»";color:var(--verde)}
-.testi figcaption{display:flex;align-items:center;gap:.8rem;margin-top:1.4em;font-size:.8rem;color:#a9c6d3}
+.prueba__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(26px,4vw,60px);align-items:start}
+.anos{font-size:clamp(3.2rem,7.5vw,5.4rem);line-height:.92;letter-spacing:-.05em;font-weight:800;color:#fff;margin:.15em 0 .25em}
+.anos span{color:var(--verde);font-size:.42em;letter-spacing:-.02em;font-weight:700}
+.prueba__stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem 2rem;margin-top:1.8rem;border-top:1px solid rgba(255,255,255,.16);padding-top:1.5rem}
+.prueba__stats dt{font-size:.98rem;font-weight:800;color:#fff}
+.prueba__stats dd{font-size:.85rem;color:#a9c6d3;margin-top:.15em;line-height:1.5}
+.testi{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radio);padding:clamp(20px,2.8vw,30px)}
+.testi blockquote p{font-size:clamp(.98rem,1.35vw,1.12rem);line-height:1.6;color:#fff;margin-bottom:.8em}
+.testi blockquote p:last-child{margin-bottom:0}
+.testi figcaption{display:flex;align-items:center;gap:.8rem;margin-top:1.2em;font-size:.8rem;color:#a9c6d3}
 .testi__av{width:38px;height:38px;border-radius:50%;background:linear-gradient(160deg,var(--azul),var(--verde));display:grid;place-items:center;color:#fff;font-weight:800;font-size:.9rem;flex:none}
 .testi figcaption strong{display:block;color:#fff;font-size:.87rem}
-.testi__nota{margin-top:1.2em;font-size:.76rem;color:#8fb0c0;line-height:1.5;padding-left:.2em}
+.huecos{display:grid;gap:.6rem;margin-top:1.2rem}
+.hueco{border:1px dashed rgba(255,255,255,.26);border-radius:12px;padding:.85em 1em;font-size:.8rem;color:#9dbccb;line-height:1.5}
+.hueco b{color:#cfe3ec;font-weight:700;display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.25em}
+.prueba__cierre{margin-top:clamp(24px,3vw,36px);padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.16);font-weight:700;color:#fff;font-size:clamp(1rem,1.4vw,1.14rem);letter-spacing:-.015em}
 
 /* 05 · Pasos */
 .pasos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2.6vw,32px)}
 .paso{position:relative;padding-top:1.4em;border-top:2px solid var(--linea)}
-.paso__n{position:absolute;top:-.85em;left:0;background:var(--blanco);padding-right:.6em;font-size:.76rem;font-weight:800;letter-spacing:.12em;color:var(--verde)}
-.paso h3{margin-bottom:.35em}
-.paso p{font-size:.93rem}
-.pasos__cta{margin-top:clamp(28px,3.6vw,42px);display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.4rem}
+.paso__n{position:absolute;top:-.85em;left:0;background:var(--claro-2);padding-right:.6em;font-size:.76rem;font-weight:800;letter-spacing:.12em;color:var(--verde)}
+.sec--blanco .paso__n{background:#fff}
+.paso h3{margin-bottom:.45em}
+.paso p{font-size:.94rem;margin-bottom:.6em}
+.paso p:last-child{margin-bottom:0}
+.pasos__cierre{margin-top:clamp(26px,3.4vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.6rem}
+.pasos__cierre em{font-style:normal;font-weight:700;color:var(--ink);font-size:.95rem}
 
-/* 06 · Servicio */
-.servicio{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(26px,4vw,56px);align-items:center}
-.servicio__media{border-radius:var(--radio-g);overflow:hidden;box-shadow:var(--sombra);background:#fff}
-.servicio__media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
-.servicio__lista{display:grid;gap:1.1rem;margin-top:1.6em}
-.servicio__lista li{display:grid;grid-template-columns:38px 1fr;gap:.9rem;align-items:start}
-.servicio__lista svg{width:20px;height:20px;color:var(--verde);margin-top:.15em}
-.servicio__lista strong{display:block;color:var(--ink);font-weight:750;font-size:.97rem}
-.servicio__lista span{font-size:.9rem}
+/* 06 · Equipo */
+.equipo{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,56px);align-items:center}
+.equipo__media{border-radius:var(--radio-g);overflow:hidden;box-shadow:var(--sombra);background:#fff}
+.equipo__media img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.equipo__lista{display:grid;gap:.5em;margin-top:1.2em;font-size:.98rem}
+.equipo__lista li{display:grid;grid-template-columns:14px 1fr;gap:.6em;align-items:baseline}
+.equipo__lista li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--verde);position:relative;top:-3px}
+.equipo__claim{margin-top:1.4em;padding:1.1em 1.2em;background:#fff;border-left:3px solid var(--verde);border-radius:0 12px 12px 0;font-weight:700;color:var(--ink);font-size:.97rem;line-height:1.5}
 
 /* 07 · FAQ */
-.faq{max-width:840px;margin-inline:auto;border-top:1px solid var(--linea)}
+.faq{max-width:860px;margin-inline:auto;border-top:1px solid var(--linea)}
 .faq details{border-bottom:1px solid var(--linea)}
-.faq summary{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;padding:1.25em 0;font-size:clamp(1rem,1.4vw,1.1rem);font-weight:700;color:var(--ink);letter-spacing:-.012em}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;padding:1.2em 0;font-size:clamp(.99rem,1.35vw,1.1rem);font-weight:700;color:var(--ink);letter-spacing:-.012em}
 .faq summary::after{content:"";width:11px;height:11px;flex:none;border-right:2px solid var(--azul);border-bottom:2px solid var(--azul);transform:rotate(45deg) translateY(-3px);transition:transform .3s var(--ease)}
 .faq details[open] summary::after{transform:rotate(-135deg) translateY(-3px)}
-.faq__a{padding:0 0 1.4em;font-size:.94rem;max-width:70ch}
+.faq__a{padding:0 0 1.3em;font-size:.95rem;max-width:74ch}
+.faq__a p{margin-bottom:.7em}
+.faq__a p:last-child{margin-bottom:0}
 
-/* 08 · Cierre + formulario */
+/* 08 · Cierre */
 .cierre{background:linear-gradient(160deg,#173448 0%,#12303f 60%,#0e2a38 100%);color:#cfe3ec;padding-block:var(--sec)}
-.cierre__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(30px,4.5vw,64px);align-items:start}
+.cierre__grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(28px,4.2vw,60px);align-items:start}
 .cierre .h2{color:#fff}
-.cierre__lead{color:#b6cfdb;margin-top:.9em;max-width:42ch}
-.cierre__puntos{display:grid;gap:.9rem;margin-top:1.8em}
-.cierre__puntos li{display:flex;align-items:flex-start;gap:.7em;font-size:.92rem;color:#cfe3ec}
-.cierre__puntos svg{width:17px;height:17px;color:var(--verde);flex:none;margin-top:.2em}
-.cierre__directo{margin-top:2em;padding-top:1.6em;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;font-size:.9rem}
+.cierre p{color:#b6cfdb}
+.cierre .retorica{display:grid;gap:.35em;margin:1.2em 0;font-size:clamp(1rem,1.3vw,1.08rem);color:#fff;font-weight:600}
+.cierre .retorica li{display:grid;grid-template-columns:14px 1fr;gap:.7em;align-items:baseline}
+.cierre .retorica li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--verde);position:relative;top:-3px}
+.cierre__slogan{margin-top:1.4em;font-size:clamp(1.2rem,2vw,1.6rem);font-weight:750;color:#fff;letter-spacing:-.02em}
+.cierre__directo{margin-top:1.8em;padding-top:1.4em;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;font-size:.88rem}
 .cierre__directo a{color:#fff;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:1px}
 .cierre__directo a:hover{border-bottom-color:var(--verde)}
+.cierre__final{margin-top:1.6em;font-size:.82rem;color:#8fb0c0;line-height:1.6}
+
 .form{background:#fff;border-radius:var(--radio-g);padding:clamp(22px,3vw,34px);box-shadow:0 40px 80px -40px rgba(0,0,0,.55);color:var(--body)}
 .form h3{color:var(--ink);margin-bottom:.3em}
-.form > form > p, .form > p{font-size:.87rem;color:var(--muted);margin-bottom:1.3em}
+.form > form > p:first-of-type{font-size:.87rem;color:var(--muted);margin-bottom:1.2em}
 .campo{margin-bottom:.95rem}
 .campo label{display:block;font-size:.79rem;font-weight:700;color:var(--ink);margin-bottom:.38em}
 .campo input,.campo select,.campo textarea{
   width:100%;min-height:50px;padding:.72em .9em;border:1.5px solid var(--linea);border-radius:12px;background:#fbfdfe;
   font:inherit;font-size:.94rem;color:var(--ink);transition:border-color .2s,background .2s,box-shadow .2s
 }
-.campo textarea{min-height:92px;resize:vertical}
+.campo textarea{min-height:88px;resize:vertical}
 .campo input::placeholder,.campo textarea::placeholder{color:#7c94a3}
 .campo input:focus,.campo select:focus,.campo textarea:focus{outline:none;border-color:var(--azul);background:#fff;box-shadow:0 0 0 4px rgba(8,107,155,.1)}
 .campo--fila{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
@@ -280,8 +308,8 @@ summary::-webkit-details-marker{display:none}
 .ok__meta{font-size:.76rem;color:var(--muted);margin-top:1em;padding-top:.9em;border-top:1px solid var(--linea)}
 
 /* Footer */
-.ft{background:#0e2a38;color:#9dbccb;padding-block:clamp(40px,5vw,64px) 26px}
-.ft__in{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,.8fr));gap:clamp(24px,3vw,44px)}
+.ft{background:#0e2a38;color:#9dbccb;padding-block:clamp(38px,4.6vw,60px) 26px}
+.ft__in{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);display:grid;grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,.8fr));gap:clamp(22px,3vw,44px)}
 .ft .logo__txt{color:#fff}
 .ft .logo__tag{color:#7fa3b4}
 .ft p{font-size:.83rem;max-width:32ch;line-height:1.6}
@@ -289,31 +317,29 @@ summary::-webkit-details-marker{display:none}
 .ft ul{display:grid;gap:.5em;font-size:.85rem}
 .ft a{color:#cfe3ec;text-decoration:none}
 .ft a:hover{color:#fff;text-decoration:underline}
-.ft__legal{max-width:var(--wrap);margin:clamp(28px,3.5vw,44px) auto 0;padding:18px var(--gut) 0;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:.5em 1.5em;justify-content:space-between;font-size:.73rem;color:#7fa3b4}
+.ft__legal{max-width:var(--wrap);margin:clamp(26px,3.4vw,42px) auto 0;padding:18px var(--gut) 0;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:.5em 1.5em;justify-content:space-between;font-size:.73rem;color:#7fa3b4}
 .ft__legal div{display:flex;flex-wrap:wrap;gap:.5em 1.2em}
 .provisional{display:inline-flex;align-items:center;gap:.5em;margin-top:1em;font-size:.71rem;color:#9dbccb;border:1px dashed rgba(255,255,255,.25);border-radius:999px;padding:.32em .8em}
 .provisional::before{content:"";width:6px;height:6px;border-radius:50%;background:#e0b14a}
 
-/* Aviso de cookies (solo aparece si hay analítica configurada) */
-.ck{position:fixed;left:var(--gut);right:var(--gut);bottom:calc(var(--gut) + 0px);z-index:80;max-width:520px;margin-inline:auto;background:#fff;border:1px solid var(--linea);border-radius:16px;padding:16px 18px;box-shadow:0 24px 60px -28px rgba(23,52,72,.55);display:none}
+/* Cookies */
+.ck{position:fixed;left:var(--gut);right:var(--gut);bottom:var(--gut);z-index:80;max-width:520px;margin-inline:auto;background:#fff;border:1px solid var(--linea);border-radius:16px;padding:16px 18px;box-shadow:0 24px 60px -28px rgba(23,52,72,.55);display:none}
 .ck.on{display:block}
 .ck p{font-size:.8rem;line-height:1.5;color:var(--body);margin-bottom:.9em}
 .ck a{color:var(--azul)}
 .ck__b{display:flex;flex-wrap:wrap;gap:.5rem}
 .ck__b button{flex:1;min-height:42px;border-radius:999px;border:1.5px solid var(--linea-2);background:#fff;font-family:inherit;font-size:.82rem;font-weight:700;color:var(--ink);cursor:pointer}
 .ck__b button:first-child{background:var(--azul);border-color:var(--azul);color:#fff}
-@media(max-width:720px){.ck{bottom:calc(66px + env(safe-area-inset-bottom))}}
 
 /* CTA móvil */
 .mcta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.55rem;padding:.55rem var(--gut) calc(.55rem + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid var(--linea);transform:translateY(130%);transition:transform .35s var(--ease)}
 .mcta.on{transform:none}
 .mcta .btn{flex:1;min-height:48px;font-size:.87rem}
+@media(max-width:720px){.ck{bottom:calc(66px + env(safe-area-inset-bottom))}}
 
-/* Aparición */
 .fade{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .fade.in{opacity:1;transform:none}
 
-/* Responsive */
 @media(max-width:1080px){
   .nav{display:none}
   .burg{display:flex}
@@ -323,10 +349,16 @@ summary::-webkit-details-marker{display:none}
   .mnav .btn{margin-top:1rem;width:100%}
   .hero__in{grid-template-columns:1fr;gap:2rem}
   .hero__media{order:2}
-  .hero__card{left:auto;right:5%;bottom:-9%;width:38%}
-  .probs,.cards,.pasos{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .card--ancha{grid-column:span 2;flex-direction:row}
-  .prueba__grid,.cierre__grid,.servicio{grid-template-columns:1fr}
+  .intro-sol,.prueba__grid,.cierre__grid,.equipo{grid-template-columns:1fr}
+  .solrow{grid-template-columns:minmax(0,1fr);gap:1.2rem}
+  .solrow:nth-child(even) .solrow__media{order:0}
+  .solrow__media{aspect-ratio:16/9}
+  .dif{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dif > div:nth-child(3n){border-right:1px solid var(--linea)}
+  .dif > div:nth-child(odd){border-right:1px solid var(--linea);padding-left:0}
+  .dif > div:nth-child(even){padding-left:clamp(18px,2.4vw,30px);border-right:0}
+  .pasos{grid-template-columns:1fr;gap:1.6rem}
+  .paso__n{background:#fff;position:static;display:block;margin-bottom:.4em;padding:0}
   .ft__in{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:720px){
@@ -335,20 +367,16 @@ summary::-webkit-details-marker{display:none}
   .logo__tag{display:none}
   .hd__right .tel,.hd__right .btn{display:none}
   .mnav{inset:64px 0 auto}
-  .hero{padding-block:16px 48px}
-  .hero__lead{font-size:.98rem}
-  .hero__actions{gap:.7rem}
+  .hero{padding-block:16px 44px}
   .hero__actions .btn{width:100%}
   .hero__card{position:relative;inset:auto;width:calc(100% - 24px);margin:-26px auto 0;grid-template-columns:28px 1fr;padding:12px 14px}
-  .probs,.cards,.pasos{grid-template-columns:1fr}
-  .card--ancha{grid-column:span 1;flex-direction:column}
-  .card--ancha .card__media{aspect-ratio:4/3;flex:none}
-  .prueba__stats{grid-template-columns:1fr}
-  .campo--fila{grid-template-columns:1fr}
+  .situaciones,.preguntas,.prueba__stats,.campo--fila,.band__cierre,.dif{grid-template-columns:1fr}
+  .preguntas li:nth-child(odd){border-right:0;padding-right:0}
+  .preguntas li:nth-child(even){padding-left:0}
+  .dif > div{border-right:0 !important;padding-left:0 !important}
   .ft__in{grid-template-columns:1fr}
   .ft{padding-bottom:84px}
   .mcta{display:flex}
-  .probs__cierre{flex-direction:column;align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
@@ -365,10 +393,10 @@ summary::-webkit-details-marker{display:none}
       <span><span class="logo__txt">activemur</span><span class="logo__tag">Únete al ahorro saludable</span></span>
     </a>
     <nav class="nav" aria-label="Secciones">
-      <a href="#problema">El problema</a>
+      <a href="#situacion">Situación actual</a>
       <a href="#soluciones">Soluciones</a>
       <a href="#confianza">Confianza</a>
-      <a href="#proceso">Cómo funciona</a>
+      <a href="#equipo">Equipo</a>
       <a href="#faq">Dudas</a>
     </nav>
     <div class="hd__right">
@@ -379,10 +407,10 @@ summary::-webkit-details-marker{display:none}
   </div>
 </header>
 <div class="mnav" id="mnav">
-  <a href="#problema">El problema</a>
+  <a href="#situacion">Situación actual</a>
   <a href="#soluciones">Soluciones</a>
   <a href="#confianza">Confianza</a>
-  <a href="#proceso">Cómo funciona</a>
+  <a href="#equipo">Equipo</a>
   <a href="#faq">Dudas</a>
   <a href="tel:+34968237316">Llamar · 968 23 73 16</a>
   <a class="btn" href="#asesoramiento">Solicita asesoramiento</a>
@@ -390,23 +418,27 @@ summary::-webkit-details-marker{display:none}
 
 <main id="top">
 
-  <!-- 01 · HERO -->
+  <!-- SECCIÓN 1 · HERO -->
   <section class="hero">
     <div class="hero__in">
       <div>
-        <span class="badge"><span class="badge__dot"></span>Asesoramiento sin compromiso en Murcia</span>
+        <span class="badge"><span class="badge__dot"></span>Más de 25 años en Murcia</span>
         <h1 class="h1">Mejora el agua que bebes<br class="br-wide"> y el&nbsp;aire que <em>respiras</em></h1>
-        <p class="hero__lead">Vas a beber agua durante toda tu vida: preocúpate de que sea de calidad. Te ayudamos a encontrar la solución adecuada para tu hogar o tu empresa, con asesoramiento personalizado e instalación propia.</p>
+        <p class="hero__sub">Más de 25 años cuidando hogares y empresas.</p>
+        <div class="hero__copy">
+          <p>Vas a beber agua durante toda tu vida. Preocúpate de que sea de calidad.</p>
+          <p>En Activemur te ayudamos a encontrar soluciones de tratamiento de agua y purificación del aire adaptadas a tu hogar o empresa.</p>
+          <p>Más comodidad. Menos preocupaciones. Y el respaldo de profesionales con más de 25 años de experiencia.</p>
+        </div>
         <div class="hero__actions">
           <a class="btn" href="#asesoramiento">Solicita asesoramiento
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn--linea" href="#soluciones">Ver soluciones</a>
+          <a class="btn btn--linea" href="#soluciones">Descubre nuestras soluciones</a>
         </div>
         <div class="hero__trust">
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Sin compromiso</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Te llamamos nosotros</span>
-
         </div>
       </div>
       <div class="hero__media">
@@ -414,9 +446,7 @@ summary::-webkit-details-marker{display:none}
           <img src="media/hero-producto.jpg" alt="Fuente de agua Activemur en una cocina luminosa" width="1200" height="900" fetchpriority="high">
         </div>
         <div class="hero__card">
-          <span class="hero__card-ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s5.5 6 5.5 9.8a5.5 5.5 0 0 1-11 0C6.5 9 12 3 12 3z"/></svg>
-          </span>
+          <span class="hero__card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s5.5 6 5.5 9.8a5.5 5.5 0 0 1-11 0C6.5 9 12 3 12 3z"/></svg></span>
           <p>Sabor de agua mineral, desde tu grifo</p>
           <span>Ósmosis inversa · flujo directo</span>
         </div>
@@ -427,246 +457,399 @@ summary::-webkit-details-marker{display:none}
   <div class="strip">
     <div class="strip__in">
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Más de 25 años de experiencia</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Asesoramiento personalizado</div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Instalación y servicio técnico</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>5 familias de soluciones</div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Hogares y empresas</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Instalación y mantenimiento</div>
     </div>
   </div>
 
-  <!-- 02 · SITUACIÓN -->
-  <section class="sec" id="problema">
+  <!-- SECCIÓN 2 · SITUACIÓN ACTUAL -->
+  <section class="sec" id="situacion">
     <div class="wrap">
       <div class="sec__head fade">
-        <span class="eyebrow">01 — Tu día a día</span>
-        <h2 class="h2">Hay cosas que haces todos los días y que podrías hacer mucho más fáciles</h2>
-        <p class="lead">Beber, cocinar, ducharte, limpiar tu casa o respirar el aire de donde pasas tantas horas. Son gestos a los que apenas prestamos atención… hasta que empiezan las incomodidades.</p>
+        <span class="eyebrow">01 — ¿Te sientes identificado?</span>
+        <h2 class="h2">Hay cosas que haces todos los días y que podrías hacer mucho más fáciles.</h2>
       </div>
 
-      <div class="probs">
-        <article class="prob fade">
-          <div class="prob__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 3h6M10 3v3.5c0 .8-.3 1.5-.9 2.1L7 10.8A3 3 0 0 0 6 13v7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-7a3 3 0 0 0-1-2.2l-2.1-2.2a3 3 0 0 1-.9-2.1V3"/><path d="M6 15h12"/></svg></div>
-          <h3 class="h3">Cargar garrafas cada semana</h3>
-          <p>Botellas pesadas desde el supermercado, envases acumulados y un gasto que no para. Todo eso se puede dejar de hacer.</p>
-        </article>
-        <article class="prob fade">
-          <div class="prob__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3s5 5.4 5 9a5 5 0 0 1-10 0c0-3.6 5-9 5-9z"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5"/><path d="M4 20h16"/></svg></div>
-          <h3 class="h3">Cal en grifos y mamparas</h3>
-          <p>Manchas que no salen, incrustaciones en los electrodomésticos y una dureza del agua que acaba pasando factura en toda la casa.</p>
-        </article>
-        <article class="prob fade">
-          <div class="prob__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h9a2.5 2.5 0 1 1-2.5 2.5"/></svg></div>
-          <h3 class="h3">Dudas sobre el aire interior</h3>
-          <p>Pasamos muchas horas dentro de casa y del trabajo. Alérgenos, olores y partículas del ambiente también se pueden tratar.</p>
-        </article>
+      <ol class="gestos fade">
+        <li>Beber agua.</li>
+        <li>Cocinar.</li>
+        <li>Ducharte.</li>
+        <li>Limpiar tu hogar.</li>
+        <li>Respirar el aire de los espacios donde pasas tantas horas.</li>
+      </ol>
+
+      <div class="prosa fade" style="max-width:58ch">
+        <p>Son gestos cotidianos a los que apenas prestamos atención.</p>
+        <p>Hasta que empiezan las incomodidades.</p>
       </div>
 
-      <div class="probs__cierre fade">
-        <p>¿Ósmosis o descalcificador? ¿Con depósito o de flujo directo? No necesitas saberlo todo: necesitas que alguien te lo explique claro.</p>
-        <a class="btn btn--linea" href="#soluciones">Ver qué solución encaja</a>
+      <div class="fade" style="margin-top:clamp(26px,3.2vw,40px)">
+        <h3 class="h3" style="margin-bottom:1em">Lo habitual es encontrarte con situaciones como estas:</h3>
+        <ul class="situaciones">
+          <li><b>01</b><span>Comprar garrafas de agua cada semana porque no te convence el sabor del grifo.</span></li>
+          <li><b>02</b><span>Cargar con botellas pesadas desde el supermercado hasta casa.</span></li>
+          <li><b>03</b><span>Acumular envases de plástico que ocupan espacio.</span></li>
+          <li><b>04</b><span>Gastar dinero continuamente en agua embotellada.</span></li>
+          <li><b>05</b><span>Encontrarte manchas de cal en grifos y mamparas.</span></li>
+          <li><b>06</b><span>Tener problemas relacionados con la dureza del agua.</span></li>
+          <li><b>07</b><span>Querer disponer de agua fría o a diferentes temperaturas sin complicaciones.</span></li>
+          <li><b>08</b><span>Preocuparte por la calidad del aire interior.</span></li>
+          <li><b>09</b><span>No saber qué sistema de tratamiento de agua necesitas.</span></li>
+          <li><b>10</b><span>Tener dudas sobre el mantenimiento, la instalación o el precio.</span></li>
+        </ul>
+      </div>
+
+      <div class="prosa fade" style="max-width:58ch;margin-top:1.6em">
+        <p>Y cuando empiezas a buscar soluciones, descubres que hay tantas opciones que resulta difícil decidir.</p>
+      </div>
+
+      <ul class="preguntas fade">
+        <li>¿Ósmosis inversa o descalcificador?</li>
+        <li>¿Con depósito o de flujo directo?</li>
+        <li>¿Una fuente de agua o un enfriador?</li>
+        <li>¿Qué equipo necesita mi hogar o mi empresa?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EL PROBLEMA REAL -->
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">El problema real</p>
+      <p class="band__claim"><strong>No necesitas saberlo todo</strong> sobre tratamiento de agua o purificación del aire. Necesitas encontrar una solución adecuada y profesionales que te ayuden a elegirla.</p>
+      <div class="band__cierre">
+        <p>Porque cada hogar es diferente.</p>
+        <p>Cada empresa tiene necesidades distintas.</p>
+        <p>Y lo importante no es instalar cualquier equipo.</p>
+        <p><em>Es instalar el que realmente necesitas.</em></p>
       </div>
     </div>
   </section>
 
-  <!-- 03 · SOLUCIONES -->
-  <section class="sec sec--claro" id="soluciones">
+  <!-- SECCIÓN 3 · NUESTRA SOLUCIÓN -->
+  <section class="sec" id="soluciones">
     <div class="wrap">
-      <div class="sec__head fade">
-        <span class="eyebrow">02 — Soluciones Activemur</span>
-        <h2 class="h2">Cinco familias de soluciones, una para cada necesidad</h2>
-        <p class="lead">Cada hogar y cada empresa son distintos. Por eso no vendemos un equipo cerrado: escuchamos tu caso y te proponemos lo que realmente necesitas.</p>
+      <div class="intro-sol">
+        <div class="sec__head fade" style="margin-bottom:0">
+          <span class="eyebrow">02 — Nuestra solución</span>
+          <h2 class="h2">Por eso, en Activemur empezamos escuchándote.</h2>
+        </div>
+        <div class="prosa fade">
+          <p>Antes de recomendarte un equipo, queremos conocer tu situación.</p>
+          <p>Cómo utilizas el agua.</p>
+          <p>Qué te gustaría mejorar.</p>
+          <p>Qué problemas quieres resolver.</p>
+          <p>Y qué solución encaja con tus necesidades y presupuesto.</p>
+          <p>Llevamos más de 25 años ofreciendo sistemas de tratamiento de agua y purificación del aire para hogares y empresas.</p>
+          <p><strong style="color:var(--ink)">Nuestra misión es ayudarte a disfrutar de una vida más cómoda, con soluciones que tengan sentido para ti.</strong></p>
+        </div>
       </div>
 
-      <div class="cards">
-        <article class="card fade">
-          <div class="card__media"><img src="media/sol-osmosis.jpg" alt="Sistema de ósmosis inversa con agua" loading="lazy" width="900" height="704"></div>
-          <div class="card__body">
-            <p class="card__kicker">Beber y cocinar</p>
+      <h3 class="h3 fade" style="margin-top:clamp(34px,4vw,54px);font-size:clamp(1.1rem,1.7vw,1.45rem)">Descubre nuestras soluciones</h3>
+
+      <div class="solrows">
+        <article class="solrow fade">
+          <figure class="solrow__media"><img src="media/sol-osmosis.jpg" alt="Sistema de ósmosis inversa con agua" loading="lazy" width="900" height="704"></figure>
+          <div class="solrow__body">
+            <p class="solrow__num">01</p>
             <h3 class="h3">Ósmosis inversa</h3>
-            <p>Deja de cargar garrafas: agua tratada en el grifo de tu cocina, con sabor a agua mineral. Flujo directo sin depósito, o renovación del equipo que ya tienes.</p>
-            <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p class="solrow__kicker">Agua tratada directamente desde tu grifo</p>
+            <p>¿Te imaginas olvidarte de cargar garrafas cada semana?</p>
+            <p>Con nuestros sistemas de ósmosis inversa puedes disponer de agua tratada en tu hogar para beber y cocinar.</p>
+            <p>Ofrecemos equipos de flujo directo sin depósito y soluciones para renovar instalaciones tradicionales.</p>
+            <ul class="solrow__bullets">
+              <li>Reduce tu dependencia del agua embotellada.</li>
+              <li>Evita transportar y almacenar tantas garrafas.</li>
+              <li>Disfruta de mayor comodidad en tu cocina.</li>
+              <li>Valora una alternativa que puede generar ahorro a largo plazo.</li>
+            </ul>
           </div>
         </article>
 
-        <article class="card fade">
-          <div class="card__media"><img src="media/sol-fuentes.jpg" alt="Fuente de agua Activemur" loading="lazy" width="720" height="900"></div>
-          <div class="card__body">
-            <p class="card__kicker">Hogar y empresa</p>
+        <article class="solrow fade">
+          <figure class="solrow__media"><img src="media/sol-fuentes.jpg" alt="Fuente de agua Activemur" loading="lazy" width="720" height="900"></figure>
+          <div class="solrow__body">
+            <p class="solrow__num">02</p>
             <h3 class="h3">Fuentes de agua</h3>
-            <p>Agua fría, caliente o al tiempo, siempre disponible. Para tu familia en casa o para empleados y clientes en la oficina, sin esperar repartos ni cargar litros.</p>
-            <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p class="solrow__kicker">Comodidad para hogares y empresas</p>
+            <p>Tener agua disponible a la temperatura que prefieres puede hacer tu día a día mucho más sencillo.</p>
+            <p>Disponemos de fuentes y dispensadores con distintas opciones de temperatura.</p>
+            <p>Soluciones para viviendas, oficinas y espacios de trabajo.</p>
+            <p>Porque disponer de agua de forma cómoda también es importante fuera de casa.</p>
           </div>
         </article>
 
-        <article class="card fade">
-          <div class="card__media"><img src="media/sol-descalcificador.jpg" alt="Descalcificador automático" loading="lazy" width="688" height="900"></div>
-          <div class="card__body">
-            <p class="card__kicker">Contra la cal</p>
+        <article class="solrow fade">
+          <figure class="solrow__media"><img src="media/sol-descalcificador.jpg" alt="Descalcificador automático" loading="lazy" width="688" height="900"></figure>
+          <div class="solrow__body">
+            <p class="solrow__num">03</p>
             <h3 class="h3">Descalcificadores</h3>
-            <p>Grifos, mamparas y electrodomésticos sin incrustaciones. Equipos automáticos que se regeneran solos, sin que tengas que hacer nada.</p>
-            <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p class="solrow__kicker">Menos problemas asociados a la cal</p>
+            <p>La dureza del agua puede provocar incrustaciones y molestias en las instalaciones domésticas.</p>
+            <p>Marcas en mamparas.</p>
+            <p>Acumulación de cal en grifos.</p>
+            <p>Depósitos en tuberías y determinados electrodomésticos.</p>
+            <p>Nuestros descalcificadores automáticos están diseñados para reducir la dureza del agua y los problemas asociados.</p>
           </div>
         </article>
 
-        <article class="card fade">
-          <div class="card__media"><img src="media/sol-hidrogenacion.jpg" alt="Equipo de hidrogenación de agua" loading="lazy" width="688" height="900"></div>
-          <div class="card__body">
-            <p class="card__kicker">Más opciones</p>
+        <article class="solrow fade">
+          <figure class="solrow__media"><img src="media/sol-hidrogenacion.jpg" alt="Equipo de hidrogenación de agua" loading="lazy" width="688" height="900"></figure>
+          <div class="solrow__body">
+            <p class="solrow__num">04</p>
             <h3 class="h3">Enfriadores e hidrogenación</h3>
-            <p>Combina la ósmosis con un enfriador y ten agua fría siempre lista, cristalina y libre de impurezas. También equipos de agua enriquecida con hidrógeno molecular.</p>
-            <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p class="solrow__kicker">Más opciones para tu agua</p>
+            <p>No todos buscamos lo mismo.</p>
+            <p>Por eso también ofrecemos sistemas de enfriamiento y equipos que permiten obtener agua enriquecida con hidrógeno molecular.</p>
+            <p>Te explicamos las características de cada tecnología para ayudarte a valorar cuál se adapta a tus preferencias.</p>
           </div>
         </article>
 
-        <article class="card card--ancha fade">
-          <div class="card__media"><img src="media/sol-aire.jpg" alt="Purificador de aire de gama alta" loading="lazy" width="688" height="900"></div>
-          <div class="card__body">
-            <p class="card__kicker">Aire interior</p>
+        <article class="solrow fade">
+          <figure class="solrow__media"><img src="media/sol-aire.jpg" alt="Purificador de aire de gama alta" loading="lazy" width="688" height="900"></figure>
+          <div class="solrow__body">
+            <p class="solrow__num">05</p>
             <h3 class="h3">Purificación del aire y limpieza</h3>
-            <p>Purificadores que eliminan el 99,98 % de bacterias y virus del ambiente, los alérgenos y los compuestos orgánicos volátiles. Y limpieza del hogar y de la ropa con menos químicos y menos agua caliente.</p>
-            <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p class="solrow__kicker">Cuida también tus espacios interiores</p>
+            <p>El agua es importante.</p>
+            <p>Pero el aire de los espacios donde vives y trabajas también merece atención.</p>
+            <p>En Activemur disponemos de purificadores de aire, equipos FilterQueen y soluciones de limpieza doméstica.</p>
+            <p>Sistemas pensados para responder a diferentes necesidades de tratamiento del aire interior y limpieza.</p>
           </div>
         </article>
+      </div>
+
+      <h3 class="h3 fade" style="margin-top:clamp(40px,5vw,68px)">¿Qué hace diferente a Activemur?</h3>
+      <div class="dif">
+        <div class="fade"><h3>Más de 25 años de experiencia</h3><p>Una trayectoria dedicada al tratamiento de agua y la purificación del aire.</p></div>
+        <div class="fade"><h3>Asesoramiento personalizado</h3><p>Te ayudamos a entender las opciones y elegir con criterio.</p></div>
+        <div class="fade"><h3>Instalación y servicio técnico</h3><p>Ofrecemos instalación, revisiones y mantenimiento para los equipos correspondientes.</p></div>
+        <div class="fade"><h3>Ahorro potencial a largo plazo</h3><p>Determinadas soluciones pueden ayudarte a reducir gastos recurrentes, como la compra de agua embotellada, dependiendo del consumo y los costes del equipo.</p></div>
+        <div class="fade"><h3>Menos envases de plástico</h3><p>Reducir la compra de botellas de agua también puede ayudarte a generar menos residuos.</p></div>
+        <div class="fade"><h3>Soluciones para hogares y empresas</h3><p>Desde una vivienda particular hasta un negocio, buscamos la alternativa adecuada para cada necesidad.</p></div>
+      </div>
+
+      <div class="fade" style="margin-top:clamp(30px,4vw,46px);display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.6rem">
+        <p style="font-weight:750;color:var(--ink);font-size:clamp(1.05rem,1.5vw,1.25rem);letter-spacing:-.02em">Activemur. Únete al ahorro saludable.</p>
+        <a class="btn" href="#asesoramiento">Descubre tu solución
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- 04 · PRUEBA SOCIAL -->
+  <!-- SECCIÓN 4 · PRUEBA SOCIAL -->
   <section class="prueba" id="confianza">
     <div class="wrap">
       <div class="prueba__grid">
         <div class="fade">
-          <span class="eyebrow eyebrow--claro">03 — Quiénes somos</span>
+          <span class="eyebrow eyebrow--claro">03 — Lo que dicen de nosotros</span>
           <p class="anos">+25<span> años</span></p>
-          <h2 class="h2">La experiencia no se improvisa</h2>
-          <p class="lead" style="color:#b6cfdb;margin-top:1em">Cuando eliges un sistema de tratamiento de agua no solo compras un equipo: confías en quien te asesora, lo instala y te ayuda a mantenerlo.</p>
-          <dl class="prueba__stats">
-            <div><dt>5 familias</dt><dd>de soluciones de agua, aire y limpieza</dd></div>
-            <div><dt>Hogares y empresas</dt><dd>desde una vivienda a un negocio</dd></div>
-            <div><dt>Instalación propia</dt><dd>y servicio técnico posterior</dd></div>
-            <div><dt>Murcia</dt><dd>Av. Ciudad de Aranjuez, 26</dd></div>
-          </dl>
+          <h2 class="h2">Más de 25 años de experiencia no se improvisan.</h2>
+          <div class="prosa" style="margin-top:1.1em;color:#b6cfdb">
+            <p>Cuando eliges un sistema de tratamiento de agua, no solo estás comprando un equipo.</p>
+            <p>También estás confiando en las personas que te asesoran, lo instalan y te ayudan a mantenerlo.</p>
+            <p>Y esa confianza importa.</p>
+            <p>En Activemur llevamos más de dos décadas trabajando para ofrecer soluciones a hogares y empresas.</p>
+          </div>
         </div>
 
         <div class="fade">
+          <h3 class="h3" style="color:#fff;margin-bottom:.9em">Nuestros números</h3>
+          <dl class="prueba__stats" style="margin-top:0;border-top:0;padding-top:0">
+            <div><dt>+25 años</dt><dd>de experiencia en el sector.</dd></div>
+            <div><dt>5 familias de soluciones</dt><dd>de tratamiento de agua, purificación del aire y limpieza.</dd></div>
+            <div><dt>Hogares y empresas</dt><dd>como ámbitos de servicio.</dd></div>
+            <div><dt>Instalación y mantenimiento</dt><dd>técnico.</dd></div>
+          </dl>
+
+          <h3 class="h3" style="color:#fff;margin:1.8em 0 .9em">La experiencia de nuestros clientes</h3>
           <figure class="testi">
             <blockquote>
-              <p>Después de 28 años comprando agua mineral, he instalado una máquina que te da agua fría, caliente o del tiempo, y la verdad que no la distingo del agua mineral. La rapidez en su instalación desde que les llamé y la amabilidad, un 10.</p>
+              <p>Muy contenta. Después de 28 años comprando agua mineral, he instalado una máquina que te da agua fría, caliente o del tiempo, y la verdad que no la distingo del agua mineral. La rapidez en su instalación desde que les llamé y la amabilidad, un 10. Recomiendo esta empresa.</p>
             </blockquote>
             <figcaption>
               <span class="testi__av" aria-hidden="true">A</span>
               <span><strong>Cliente de Activemur · Alicante</strong>Testimonio publicado en activemur.es</span>
             </figcaption>
           </figure>
-          <p class="testi__nota">Pendiente de material: los testimonios de cliente con ósmosis, con descalcificador y de empresa con fuente de agua. En la web actual solo está publicado el de arriba.</p>
+
+          <div class="huecos">
+            <div class="hueco"><b>Pendiente</b>Testimonio real de cliente con sistema de ósmosis</div>
+            <div class="hueco"><b>Pendiente</b>Testimonio real de cliente con descalcificador</div>
+            <div class="hueco"><b>Pendiente</b>Testimonio real de empresa con fuente de agua</div>
+            <div class="hueco"><b>Pendiente</b>Reseñas verificadas de Google</div>
+            <div class="hueco"><b>Pendiente</b>Logotipos reales de empresas clientes</div>
+          </div>
+
+          <p class="prueba__cierre">La mejor garantía de confianza es conocer experiencias reales.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 05 · CÓMO EMPEZAR -->
-  <section class="sec" id="proceso">
+  <!-- SECCIÓN 5 · CÓMO EMPEZAR -->
+  <section class="sec sec--claro" id="proceso">
     <div class="wrap">
       <div class="sec__head sec__head--centro fade">
         <span class="eyebrow">04 — Cómo empezar</span>
-        <h2 class="h2">Encontrar la solución adecuada es más fácil de lo que imaginas</h2>
-        <p class="lead">No necesitas conocer todas las tecnologías ni comparar decenas de equipos por tu cuenta. Para eso estamos nosotros.</p>
+        <h2 class="h2">Encontrar la solución adecuada puede ser más fácil de lo que imaginas.</h2>
+        <div class="prosa" style="margin-top:1em">
+          <p>No necesitas conocer todas las tecnologías.</p>
+          <p>Ni comparar decenas de equipos por tu cuenta.</p>
+          <p>Para eso estamos nosotros.</p>
+        </div>
       </div>
+
       <div class="pasos">
-        <div class="paso fade"><span class="paso__n">01</span><h3 class="h3">Cuéntanos qué necesitas</h3><p>Dejar de comprar garrafas, problemas con la cal, una fuente para tu empresa o el aire de tus espacios. Empezamos por escucharte.</p></div>
-        <div class="paso fade"><span class="paso__n">02</span><h3 class="h3">Te asesoramos</h3><p>Analizamos tu caso y te explicamos las opciones en claro: qué equipo encaja, qué mantenimiento necesita y cuánto cuesta.</p></div>
-        <div class="paso fade"><span class="paso__n">03</span><h3 class="h3">Tú decides</h3><p>Presupuesto cerrado por escrito antes de decidir. Y si sales adelante, instalamos y mantenemos nosotros el equipo.</p></div>
+        <div class="paso fade">
+          <span class="paso__n">01</span>
+          <h3 class="h3">Cuéntanos qué necesitas</h3>
+          <p>Solicita asesoramiento y explícanos qué te gustaría mejorar.</p>
+          <p>¿Quieres dejar de comprar garrafas?</p>
+          <p>¿Tienes problemas con la cal?</p>
+          <p>¿Necesitas una fuente de agua para tu empresa?</p>
+          <p>¿Quieres mejorar el tratamiento del aire interior?</p>
+          <p>Empezaremos por escucharte.</p>
+        </div>
+        <div class="paso fade">
+          <span class="paso__n">02</span>
+          <h3 class="h3">Te ayudamos a encontrar la solución adecuada</h3>
+          <p>Analizaremos tus necesidades y te explicaremos las opciones disponibles.</p>
+          <p>Hablaremos de las características de los equipos, su funcionamiento, instalación, mantenimiento y modalidades de adquisición.</p>
+          <p>Para que puedas comparar con información clara.</p>
+        </div>
+        <div class="paso fade">
+          <span class="paso__n">03</span>
+          <h3 class="h3">Tú decides cómo avanzar</h3>
+          <p>Una vez conozcas las alternativas, podrás valorar cuál encaja mejor contigo.</p>
+          <p>Si decides continuar, te explicaremos los siguientes pasos.</p>
+          <p style="font-weight:700;color:var(--ink)">Sin tener que elegir a ciegas.</p>
+        </div>
       </div>
-      <div class="pasos__cta fade">
+
+      <div class="pasos__cierre fade">
         <a class="btn" href="#asesoramiento">Solicita asesoramiento
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <span class="small">Sin compromiso · Te llamamos en menos de 24 h laborables</span>
+        <em>Te escuchamos, te orientamos y tú decides.</em>
       </div>
     </div>
   </section>
 
-  <!-- 06 · SERVICIO -->
-  <section class="sec sec--claro" id="servicio">
+  <!-- SECCIÓN 6 · EL EQUIPO -->
+  <section class="sec" id="equipo">
     <div class="wrap">
-      <div class="servicio">
+      <div class="equipo">
         <div class="fade">
-          <span class="eyebrow">05 — Detrás del equipo</span>
-          <h2 class="h2">Asesoramos, instalamos y seguimos ahí</h2>
-          <p class="lead" style="margin-top:1em">Una instalación bien hecha es la diferencia entre un equipo que funciona años y un problema cada mes. Por eso la posventa la llevamos nosotros.</p>
-          <ul class="servicio__lista">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              <span><strong>Trato directo, sin call center</strong>Hablas con quien conoce tu instalación y tus equipos.</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2 2 0 0 1-2.8 0l-2.2-2.2a2 2 0 0 1 0-2.8z"/><path d="M14.7 6.3 18 3l3 3-3.3 3.3"/></svg>
-              <span><strong>Instalación y mantenimiento propios</strong>Revisiones y servicio técnico de los equipos instalados.</span>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              <span><strong>Presupuesto claro y sin sorpresas</strong>Equipo, instalación y mantenimiento por escrito antes de empezar.</span>
-            </li>
+          <span class="eyebrow">05 — El equipo</span>
+          <h2 class="h2" style="margin:.5em 0 .7em">Más de 25 años de experiencia. Personas que te acompañan.</h2>
+          <div class="prosa">
+            <p>Detrás de Activemur hay profesionales dedicados al tratamiento de agua y la purificación del aire.</p>
+            <p>Personas que conocen los equipos, las tecnologías y las necesidades que pueden surgir antes y después de una instalación.</p>
+            <p>Porque tan importante como elegir un buen sistema es saber a quién acudir cuando necesitas asesoramiento o mantenimiento.</p>
+          </div>
+          <h3 class="h3" style="margin:1.4em 0 .5em">Nuestro compromiso es ayudarte a elegir bien.</h3>
+          <ul class="equipo__lista">
+            <li>Escuchamos tus necesidades.</li>
+            <li>Te explicamos las alternativas.</li>
+            <li>Y ponemos a tu disposición nuestros servicios técnicos de instalación, revisión y mantenimiento.</li>
           </ul>
+          <p class="equipo__claim">No queremos que tengas que adaptarte a un equipo. Queremos ayudarte a encontrar uno que se adapte a ti.</p>
         </div>
-        <div class="servicio__media fade">
-          <img src="media/instalacion.jpg" alt="Instalación de un sistema de ósmosis en un armario bajo el fregadero" loading="lazy" width="1000" height="750">
+        <div class="fade">
+          <figure class="equipo__media">
+            <img src="media/instalacion.jpg" alt="Instalación de un sistema de tratamiento de agua en un armario bajo el fregadero" loading="lazy" width="1000" height="750">
+          </figure>
+          <div class="huecos" style="margin-top:1rem">
+            <div class="hueco" style="border-color:var(--linea-2);color:var(--muted)"><b style="color:var(--ink)">Pendiente</b>Fotografía real del equipo Activemur</div>
+            <div class="hueco" style="border-color:var(--linea-2);color:var(--muted)"><b style="color:var(--ink)">Pendiente</b>Presentación del fundador o responsable</div>
+            <div class="hueco" style="border-color:var(--linea-2);color:var(--muted)"><b style="color:var(--ink)">Pendiente</b>Fotografías de instalaciones reales</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 07 · FAQ -->
-  <section class="sec" id="faq">
+  <!-- SECCIÓN 7 · FAQ -->
+  <section class="sec sec--claro" id="faq">
     <div class="wrap">
       <div class="sec__head sec__head--centro fade">
-        <span class="eyebrow">06 — Dudas frecuentes</span>
-        <h2 class="h2">Lo que más nos preguntan</h2>
+        <span class="eyebrow">06 — ¿Tienes dudas?</span>
+        <h2 class="h2">Preguntas frecuentes</h2>
       </div>
       <div class="faq fade">
         <details open>
-          <summary>¿Qué diferencia hay entre ósmosis inversa y descalcificador?</summary>
-          <div class="faq__a">El descalcificador reduce la dureza del agua: evita la cal en grifos, mamparas y electrodomésticos. La ósmosis inversa trata el agua que bebes y cocinas, eliminando microplásticos, metales pesados y contaminantes. No son alternativas: cada una resuelve un problema distinto y muchas casas necesitan las dos.</div>
+          <summary>¿Qué sistema de tratamiento de agua necesito?</summary>
+          <div class="faq__a">
+            <p>Depende de las características del agua y de lo que quieras conseguir.</p>
+            <p>Si buscas agua tratada para beber y cocinar, puede interesarte un sistema de ósmosis inversa.</p>
+            <p>Si tu principal problema es la dureza del agua, quizá necesites un descalcificador.</p>
+            <p>En Activemur te ayudamos a conocer las diferencias y encontrar la solución adecuada.</p>
+          </div>
         </details>
         <details>
-          <summary>¿Necesito saber qué equipo quiero antes de llamaros?</summary>
-          <div class="faq__a">No. Justo eso es lo que hacemos: preguntarte cómo usas el agua, cuántas personas sois, si tienes problemas de cal y qué te gustaría mejorar. Después te proponemos la opción que encaja con tu caso y tu presupuesto, sin venderte el equipo más caro.</div>
+          <summary>¿Puedo ahorrar dinero instalando un sistema de ósmosis?</summary>
+          <div class="faq__a">
+            <p>Si compras agua embotellada habitualmente, un equipo doméstico puede ayudarte a reducir ese gasto recurrente.</p>
+            <p>El ahorro dependerá del consumo, la inversión inicial y los costes de mantenimiento.</p>
+            <p>Te ayudaremos a valorar estos factores antes de decidir.</p>
+          </div>
         </details>
         <details>
-          <summary>¿La instalación y el mantenimiento los hacéis vosotros?</summary>
-          <div class="faq__a">Sí. Instalamos nosotros y nos encargamos de las revisiones y el mantenimiento de los equipos que instalamos. No te derivamos a un servicio externo.</div>
+          <summary>¿Los equipos necesitan mantenimiento?</summary>
+          <div class="faq__a">
+            <p>Sí. Cada tecnología tiene sus propias necesidades de mantenimiento.</p>
+            <p>Ofrecemos servicios de revisión y mantenimiento técnico para los equipos correspondientes, siguiendo sus características y recomendaciones de uso.</p>
+          </div>
         </details>
         <details>
-          <summary>¿Cuánto cuesta y cuánto se tarda en instalar?</summary>
-          <div class="faq__a">Depende del equipo y de la instalación de tu casa o empresa, por eso damos presupuesto cerrado por escrito después de ver el caso. En viviendas, la mayoría de instalaciones se resuelven en una sola visita.</div>
+          <summary>¿Puedo comprar definitivamente el equipo?</summary>
+          <div class="faq__a">
+            <p>Sí. Disponemos de opciones de adquisición definitiva para determinados equipos.</p>
+            <p>Durante el asesoramiento te explicaremos las modalidades disponibles y sus condiciones.</p>
+          </div>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- 08 · CIERRE + FORMULARIO -->
+  <!-- SECCIÓN 8 · CIERRE -->
   <section class="cierre" id="asesoramiento">
     <div class="wrap">
       <div class="cierre__grid">
         <div class="fade">
           <span class="eyebrow eyebrow--claro">07 — Únete al ahorro saludable</span>
-          <h2 class="h2">Dinos qué necesitas y te decimos qué haríamos nosotros</h2>
-          <p class="cierre__lead">Una llamada y un presupuesto claro. Sin compromiso y sin que nadie te venda lo que no necesitas.</p>
-          <ul class="cierre__puntos">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Te llamamos en menos de 24 h laborables</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Visita o videollamada sin compromiso, si hace falta ver la instalación</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Presupuesto por escrito: equipo, instalación y mantenimiento</li>
+          <h2 class="h2" style="margin:.5em 0 .8em">Vas a beber agua durante toda tu vida. Preocúpate de que sea de calidad.</h2>
+          <p>Piénsalo.</p>
+          <ul class="retorica">
+            <li>¿Cuántas garrafas has comprado este año?</li>
+            <li>¿Cuántas veces has tenido que cargarlas hasta casa?</li>
+            <li>¿Cuánto espacio ocupan?</li>
+            <li>¿Cuánto dinero destinas a ellas?</li>
+            <li>¿Y qué otras incomodidades relacionadas con el agua o el aire de tu hogar te gustaría resolver?</li>
           </ul>
+          <p>Quizá ha llegado el momento de buscar una alternativa.</p>
+          <p style="margin-top:.6em">Una solución adaptada a tus necesidades.</p>
+          <p>Que te aporte comodidad.</p>
+          <p>Que pueda ayudarte a reducir gastos recurrentes.</p>
+          <p>Y que cuente con el respaldo de profesionales con más de 25 años de experiencia.</p>
+          <h3 class="h3" style="color:#fff;margin:1.3em 0 .5em">No tienes que decidirlo solo.</h3>
+          <p>En Activemur te escuchamos, te explicamos las opciones y te ayudamos a encontrar la solución que mejor encaja contigo.</p>
+          <p class="cierre__slogan">Únete al ahorro saludable.</p>
           <div class="cierre__directo">
             <a href="tel:+34968237316">968 23 73 16</a>
             <a href="tel:+34600505060">600 50 50 60</a>
             <a href="mailto:administracion@activemur.es">administracion@activemur.es</a>
           </div>
+          <p class="cierre__final">Activemur. Más de 25 años ofreciendo soluciones de tratamiento de agua y purificación del aire para hogares y empresas.</p>
         </div>
 
         <div class="form fade">
           <form id="leadForm" novalidate>
             <h3 class="h3">Solicita asesoramiento</h3>
-            <p>Te contestamos nosotros, no un formulario automático. Los campos marcados con * son necesarios para poder llamarte.</p>
+            <p>Te contestamos nosotros, no un formulario automático. Los campos con * son necesarios para poder llamarte.</p>
 
             <div class="campo">
               <label for="nombre">Nombre y apellidos *</label>
@@ -685,21 +868,21 @@ summary::-webkit-details-marker{display:none}
             </div>
 
             <div class="campo">
-              <label for="solucion">¿Qué te interesa? *</label>
+              <label for="solucion">Solución de interés *</label>
               <select id="solucion" name="solucion" required>
                 <option value="">Selecciona una opción</option>
-                <option value="osmosis">Ósmosis inversa</option>
+                <option value="osmosis">Ósmosis</option>
                 <option value="descalcificacion">Descalcificación</option>
-                <option value="fuentes">Fuentes de agua</option>
+                <option value="fuentes">Fuentes</option>
                 <option value="enfriamiento">Enfriamiento / hidrogenación</option>
-                <option value="aire">Purificación de aire y limpieza</option>
-                <option value="general">Asesoramiento general: no lo tengo claro</option>
+                <option value="aire">Aire / limpieza</option>
+                <option value="general">Asesoramiento general</option>
               </select>
             </div>
 
             <div class="campo">
-              <label for="mensaje">¿Algo que debamos saber? <span style="font-weight:500;color:var(--muted)">(opcional)</span></label>
-              <textarea id="mensaje" name="mensaje" placeholder="Número de personas en casa, problemas de cal, si es para una empresa…"></textarea>
+              <label for="mensaje">Mensaje <span style="font-weight:500;color:var(--muted)">(opcional)</span></label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos lo que necesites"></textarea>
             </div>
 
             <label class="consent">
@@ -708,7 +891,7 @@ summary::-webkit-details-marker{display:none}
             </label>
 
             <p class="ferr" id="ferr" role="alert" aria-live="polite"></p>
-            <button type="submit" class="btn" id="enviar">Solicitar asesoramiento
+            <button type="submit" class="btn" id="enviar">Solicita asesoramiento
               <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
             <p class="form__nota">Usamos tus datos solo para responderte. Sin listas de correo ni terceros.</p>
@@ -733,7 +916,7 @@ summary::-webkit-details-marker{display:none}
         <span class="logo__mark"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c3.6 4.5 6 7.6 6 10.4A6 6 0 1 1 6 13.4C6 10.6 8.4 7.5 12 3z" fill="#fff"/></svg></span>
         <span><span class="logo__txt">activemur</span><span class="logo__tag">Únete al ahorro saludable</span></span>
       </a>
-      <p style="margin-top:1em">Tratamiento de agua y purificación de aire para hogares y empresas en Murcia.</p>
+      <p style="margin-top:1em">Más de 25 años ofreciendo soluciones de tratamiento de agua y purificación del aire para hogares y empresas.</p>
       <p class="provisional">Versión provisional para revisión del cliente</p>
     </div>
     <div>
@@ -743,7 +926,7 @@ summary::-webkit-details-marker{display:none}
         <li><a href="#soluciones">Fuentes de agua</a></li>
         <li><a href="#soluciones">Descalcificadores</a></li>
         <li><a href="#soluciones">Enfriadores e hidrogenación</a></li>
-        <li><a href="#soluciones">Purificación de aire</a></li>
+        <li><a href="#soluciones">Purificación del aire y limpieza</a></li>
       </ul>
     </div>
     <div>
@@ -796,8 +979,8 @@ window.ACTIVEMUR_GA4 = "";
 (function(){
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
 
-  /* --- Consentimiento y carga de GA4 --- */
   var GA = window.ACTIVEMUR_GA4 || "";
   var KEY = "activemur-cookies";
   var ck = document.getElementById("ck");
@@ -814,26 +997,23 @@ window.ACTIVEMUR_GA4 = "";
     window.gtag("js", new Date());
     window.gtag("config", GA, { anonymize_ip: true, send_page_view: true });
   }
-
   function decide(accept){
     try { localStorage.setItem(KEY, accept ? "1" : "0"); } catch(e){}
     if (ck) ck.classList.remove("on");
     if (accept) loadGA();
   }
-
   try {
     var saved = localStorage.getItem(KEY);
     if (saved === "1") loadGA();
     else if (saved === null && GA && ck) setTimeout(function(){ ck.classList.add("on"); }, 1200);
   } catch(e){}
-
   if (ck){
     var si = document.getElementById("ckSi"), no = document.getElementById("ckNo");
     if (si) si.addEventListener("click", function(){ decide(true); });
     if (no) no.addEventListener("click", function(){ decide(false); });
   }
-  var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
 
+  /* Header y barra móvil */
   var hd = document.getElementById("hd"), mcta = document.getElementById("mcta");
   function onScroll(){
     var s = window.scrollY || document.documentElement.scrollTop;
@@ -842,6 +1022,7 @@ window.ACTIVEMUR_GA4 = "";
   }
   window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
 
+  /* Menú móvil */
   var burg = document.getElementById("burg"), mnav = document.getElementById("mnav");
   if (burg && mnav){
     burg.addEventListener("click", function(){
@@ -854,11 +1035,12 @@ window.ACTIVEMUR_GA4 = "";
     });
   }
 
+  /* Aparición y enlace activo */
   var fades = document.querySelectorAll(".fade");
   if ("IntersectionObserver" in window && !reduce){
     var io = new IntersectionObserver(function(es){
       es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
-    }, {rootMargin:"0px 0px -10% 0px", threshold:.06});
+    }, {rootMargin:"0px 0px -8% 0px", threshold:.05});
     fades.forEach(function(f){ io.observe(f); });
 
     var links = document.querySelectorAll('.nav a[href^="#"]');
@@ -877,6 +1059,7 @@ window.ACTIVEMUR_GA4 = "";
     fades.forEach(function(f){ f.classList.add("in"); });
   }
 
+  /* Formulario */
   var form = document.getElementById("leadForm");
   if (!form) return;
   var ferr = document.getElementById("ferr");
@@ -951,47 +1134,25 @@ window.ACTIVEMUR_GA4 = "";
     });
   });
 
-  /* CTA principales */
+  /* Medición */
   document.querySelectorAll('a[href="#asesoramiento"]:not(.card__link), a.btn[href="tel:+34968237316"]').forEach(function(a){
     a.addEventListener("click", function(){
       track("cta_click", {where: a.textContent.trim().slice(0,30), seccion: (a.closest("section")||{}).id || "header"});
     });
   });
-
-  /* Qué solución despierta interés (enlace de cada tarjeta) */
-  document.querySelectorAll(".card__link").forEach(function(a){
-    a.addEventListener("click", function(){
-      var card = a.closest(".card");
-      var titulo = card ? card.querySelector("h3").textContent.trim() : "";
-      track("solucion_click", {solucion: titulo});
-    });
-  });
-
-  /* Llamadas y emails */
   document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"]').forEach(function(a){
-    a.addEventListener("click", function(){
-      track("contacto_click", {tipo: a.getAttribute("href").split(":")[0]});
-    });
+    a.addEventListener("click", function(){ track("contacto_click", {tipo: a.getAttribute("href").split(":")[0]}); });
   });
-
-  /* FAQ */
   document.querySelectorAll(".faq summary").forEach(function(s){
     s.addEventListener("click", function(){
-      setTimeout(function(){
-        if (s.parentElement.open) track("faq_open", {pregunta: s.textContent.trim().slice(0,60)});
-      }, 40);
+      setTimeout(function(){ if (s.parentElement.open) track("faq_open", {pregunta: s.textContent.trim().slice(0,60)}); }, 40);
     });
   });
-
-  /* Profundidad de lectura (una sola vez al 75 %) */
   var leido = false;
   window.addEventListener("scroll", function(){
     if (leido) return;
     var h = document.documentElement.scrollHeight - window.innerHeight;
-    if (h > 0 && (window.scrollY / h) > 0.75){
-      leido = true;
-      track("scroll_75", {});
-    }
+    if (h > 0 && (window.scrollY / h) > 0.75){ leido = true; track("scroll_75", {}); }
   }, {passive:true});
 })();
 </script>
