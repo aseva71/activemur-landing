@@ -144,7 +144,12 @@ summary::-webkit-details-marker{display:none}
 .hero__copy p{font-size:clamp(.97rem,1.2vw,1.05rem);margin-bottom:.55em;max-width:52ch}
 .hero__copy p:last-child{margin-bottom:0}
 .hero__actions{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1rem;margin-top:1.6rem}
-.hero__trust{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1.5rem;font-size:.84rem;color:var(--body);font-weight:600}
+.hero__lema{
+  display:inline-flex;align-items:center;gap:.55em;margin-top:1.5rem;
+  font-size:clamp(1.1rem,1.7vw,1.45rem);font-weight:750;letter-spacing:-.022em;color:var(--azul)
+}
+.hero__lema::before{content:"";width:26px;height:2px;border-radius:2px;background:var(--verde);flex:none}
+.hero__trust{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1rem;font-size:.84rem;color:var(--body);font-weight:600}
 .hero__trust span{display:flex;align-items:center;gap:.45em}
 .hero__trust svg{width:16px;height:16px;color:var(--verde);flex:none}
 .hero__media{position:relative}
@@ -436,6 +441,7 @@ summary::-webkit-details-marker{display:none}
           </a>
           <a class="btn btn--linea" href="#soluciones">Descubre nuestras soluciones</a>
         </div>
+        <p class="hero__lema">Únete al ahorro saludable.</p>
         <div class="hero__trust">
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Sin compromiso</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Te llamamos nosotros</span>
