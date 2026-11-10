@@ -192,7 +192,11 @@ summary::-webkit-details-marker{display:none}
 .card__link{margin-top:1.1em;display:inline-flex;align-items:center;gap:.4em;font-size:.87rem;font-weight:700;color:var(--azul);text-decoration:none}
 .card__link svg{width:15px;height:15px;transition:transform .25s var(--ease)}
 .card:hover .card__link svg{transform:translateX(3px)}
-.card--ancha{grid-column:span 2}
+.card--ancha{grid-column:span 2;flex-direction:row}
+.card--ancha .card__media{flex:0 0 40%;aspect-ratio:auto}
+.card--ancha .card__body{justify-content:center;padding:clamp(20px,2.6vw,30px)}
+.card--ancha .card__body p{flex:0 0 auto}
+.card--ancha .card__link{margin-top:.9em}
 
 /* 04 · Prueba social */
 .prueba{background:var(--oscuro);color:#cfe3ec;padding-block:var(--sec)}
@@ -321,7 +325,7 @@ summary::-webkit-details-marker{display:none}
   .hero__media{order:2}
   .hero__card{left:auto;right:5%;bottom:-9%;width:38%}
   .probs,.cards,.pasos{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .card--ancha{grid-column:span 2}
+  .card--ancha{grid-column:span 2;flex-direction:row}
   .prueba__grid,.cierre__grid,.servicio{grid-template-columns:1fr}
   .ft__in{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -337,7 +341,8 @@ summary::-webkit-details-marker{display:none}
   .hero__actions .btn{width:100%}
   .hero__card{position:relative;inset:auto;width:calc(100% - 24px);margin:-26px auto 0;grid-template-columns:28px 1fr;padding:12px 14px}
   .probs,.cards,.pasos{grid-template-columns:1fr}
-  .card--ancha{grid-column:span 1}
+  .card--ancha{grid-column:span 1;flex-direction:column}
+  .card--ancha .card__media{aspect-ratio:4/3;flex:none}
   .prueba__stats{grid-template-columns:1fr}
   .campo--fila{grid-template-columns:1fr}
   .ft__in{grid-template-columns:1fr}
