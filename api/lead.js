@@ -43,6 +43,16 @@ const OBJ = {
   nose: "No lo tiene claro",
 };
 
+// Solución de interés (formulario de una pantalla, guía de diseño)
+const SOL = {
+  osmosis: "Ósmosis inversa",
+  descalcificacion: "Descalcificación",
+  fuentes: "Fuentes de agua",
+  enfriamiento: "Enfriamiento / hidrogenación",
+  aire: "Purificación de aire y limpieza",
+  general: "Asesoramiento general",
+};
+
 module.exports = async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
 
@@ -74,6 +84,8 @@ module.exports = async function handler(req, res) {
   const cp = String(body.cp || "").replace(/\D/g, "").slice(0, 5);
   const urgencia = String(body.urgencia || "");
   const objetivos = Array.isArray(body.objetivos) ? body.objetivos.slice(0, 8) : [];
+  const solucion = String(body.solucion || "").slice(0, 40);
+  const mensaje = String(body.mensaje || "").trim().slice(0, 1200);
 
   if (nombre.length < 2) return res.status(400).json({ error: "Falta el nombre" });
   if (!body.consent) return res.status(400).json({ error: "Falta el consentimiento" });
@@ -94,6 +106,8 @@ module.exports = async function handler(req, res) {
   if (objetivos.includes("cal")) score += 1;
   if (objetivos.includes("sabor")) score += 1;
   if (objetivos.includes("nose")) score -= 1;
+  if (solucion && solucion !== "general") score += 1;
+  if (mensaje.length > 25) score += 1;
   const temp = score >= 5 ? "caliente" : score >= 2 ? "templado" : "frio";
 
   const lead = {
@@ -106,6 +120,8 @@ module.exports = async function handler(req, res) {
     tipo: TIPO[body.tipo] || body.tipo || "—",
     instalacion: INST[body.instalacion] || body.instalacion || "—",
     objetivos: objetivos.map((o) => OBJ[o] || o).join(", ") || "—",
+    solucion: SOL[solucion] || solucion || "—",
+    mensaje: mensaje || "—",
     urgencia: URG[urgencia] || urgencia || "—",
     localidad: cp ? `${localidad} (${cp})` : localidad,
     personas: String(body.personas || "—"),
@@ -113,7 +129,7 @@ module.exports = async function handler(req, res) {
     ip,
   };
 
-  const subject = `[Web] ${temp === "caliente" ? "🔥 " : ""}${lead.nombre} · ${lead.localidad} · ${lead.urgencia}`;
+  const subject = `[Web] ${temp === "caliente" ? "\u{1F525} " : ""}${lead.nombre} · ${lead.solucion} · ${lead.localidad}`;
   const rows = [
     ["Temperatura", `${temp} (score ${score})`],
     ["Nombre", lead.nombre],
@@ -121,7 +137,8 @@ module.exports = async function handler(req, res) {
     ["Email", lead.email],
     ["Para quién", lead.tipo],
     ["Dónde", lead.instalacion],
-    ["Le interesa", lead.objetivos],
+    ["Le interesa", lead.solucion === "—" ? lead.objetivos : lead.solucion],
+    ["Mensaje", lead.mensaje],
     ["Cuándo", lead.urgencia],
     ["Localidad", lead.localidad],
     ["Personas", lead.personas],
