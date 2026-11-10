@@ -290,6 +290,16 @@ summary::-webkit-details-marker{display:none}
 .provisional{display:inline-flex;align-items:center;gap:.5em;margin-top:1em;font-size:.71rem;color:#9dbccb;border:1px dashed rgba(255,255,255,.25);border-radius:999px;padding:.32em .8em}
 .provisional::before{content:"";width:6px;height:6px;border-radius:50%;background:#e0b14a}
 
+/* Aviso de cookies (solo aparece si hay analítica configurada) */
+.ck{position:fixed;left:var(--gut);right:var(--gut);bottom:calc(var(--gut) + 0px);z-index:80;max-width:520px;margin-inline:auto;background:#fff;border:1px solid var(--linea);border-radius:16px;padding:16px 18px;box-shadow:0 24px 60px -28px rgba(23,52,72,.55);display:none}
+.ck.on{display:block}
+.ck p{font-size:.8rem;line-height:1.5;color:var(--body);margin-bottom:.9em}
+.ck a{color:var(--azul)}
+.ck__b{display:flex;flex-wrap:wrap;gap:.5rem}
+.ck__b button{flex:1;min-height:42px;border-radius:999px;border:1.5px solid var(--linea-2);background:#fff;font-family:inherit;font-size:.82rem;font-weight:700;color:var(--ink);cursor:pointer}
+.ck__b button:first-child{background:var(--azul);border-color:var(--azul);color:#fff}
+@media(max-width:720px){.ck{bottom:calc(66px + env(safe-area-inset-bottom))}}
+
 /* CTA móvil */
 .mcta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.55rem;padding:.55rem var(--gut) calc(.55rem + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid var(--linea);transform:translateY(130%);transition:transform .35s var(--ease)}
 .mcta.on{transform:none}
@@ -465,9 +475,9 @@ summary::-webkit-details-marker{display:none}
         <article class="card fade">
           <div class="card__media"><img src="media/sol-osmosis.jpg" alt="Sistema de ósmosis inversa con agua" loading="lazy" width="900" height="704"></div>
           <div class="card__body">
-            <p class="card__kicker">Agua para beber y cocinar</p>
+            <p class="card__kicker">Beber y cocinar</p>
             <h3 class="h3">Ósmosis inversa</h3>
-            <p>Agua tratada directamente desde tu grifo, sin cargar garrafas. Equipos de flujo directo sin depósito y renovación de instalaciones tradicionales.</p>
+            <p>Deja de cargar garrafas: agua tratada en el grifo de tu cocina, con sabor a agua mineral. Flujo directo sin depósito, o renovación del equipo que ya tienes.</p>
             <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
@@ -475,9 +485,9 @@ summary::-webkit-details-marker{display:none}
         <article class="card fade">
           <div class="card__media"><img src="media/sol-fuentes.jpg" alt="Fuente de agua Activemur" loading="lazy" width="720" height="900"></div>
           <div class="card__body">
-            <p class="card__kicker">Hogares y empresas</p>
+            <p class="card__kicker">Hogar y empresa</p>
             <h3 class="h3">Fuentes de agua</h3>
-            <p>Agua a la temperatura que prefieras, disponible para tu familia o para tus empleados y clientes. Sin cargar litros ni esperar repartos.</p>
+            <p>Agua fría, caliente o al tiempo, siempre disponible. Para tu familia en casa o para empleados y clientes en la oficina, sin esperar repartos ni cargar litros.</p>
             <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
@@ -485,9 +495,9 @@ summary::-webkit-details-marker{display:none}
         <article class="card fade">
           <div class="card__media"><img src="media/sol-descalcificador.jpg" alt="Descalcificador automático" loading="lazy" width="688" height="900"></div>
           <div class="card__body">
-            <p class="card__kicker">Adiós a la cal</p>
+            <p class="card__kicker">Contra la cal</p>
             <h3 class="h3">Descalcificadores</h3>
-            <p>Menos incrustaciones en grifos, mamparas, tuberías y electrodomésticos. Equipos automáticos que se regeneran solos.</p>
+            <p>Grifos, mamparas y electrodomésticos sin incrustaciones. Equipos automáticos que se regeneran solos, sin que tengas que hacer nada.</p>
             <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
@@ -495,9 +505,9 @@ summary::-webkit-details-marker{display:none}
         <article class="card fade">
           <div class="card__media"><img src="media/sol-hidrogenacion.jpg" alt="Equipo de hidrogenación de agua" loading="lazy" width="688" height="900"></div>
           <div class="card__body">
-            <p class="card__kicker">Más opciones para tu agua</p>
+            <p class="card__kicker">Más opciones</p>
             <h3 class="h3">Enfriadores e hidrogenación</h3>
-            <p>Agua fría, cristalina y libre de impurezas, combinada con ósmosis. También equipos de agua enriquecida con hidrógeno molecular.</p>
+            <p>Combina la ósmosis con un enfriador y ten agua fría siempre lista, cristalina y libre de impurezas. También equipos de agua enriquecida con hidrógeno molecular.</p>
             <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
@@ -505,9 +515,9 @@ summary::-webkit-details-marker{display:none}
         <article class="card card--ancha fade">
           <div class="card__media"><img src="media/sol-aire.jpg" alt="Purificador de aire de gama alta" loading="lazy" width="688" height="900"></div>
           <div class="card__body">
-            <p class="card__kicker">Aire y limpieza</p>
+            <p class="card__kicker">Aire interior</p>
             <h3 class="h3">Purificación del aire y limpieza</h3>
-            <p>Purificadores de gama alta que limpian el aire y las superficies, eliminan el 99,98 % de bacterias y virus, protegen frente a alérgenos y destruyen compuestos orgánicos volátiles. Además, equipos FilterQueen y soluciones de limpieza doméstica que reducen el uso de químicos, detergentes y agua caliente.</p>
+            <p>Purificadores que eliminan el 99,98 % de bacterias y virus del ambiente, los alérgenos y los compuestos orgánicos volátiles. Y limpieza del hogar y de la ropa con menos químicos y menos agua caliente.</p>
             <a class="card__link" href="#asesoramiento">Quiero saber más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
@@ -756,15 +766,67 @@ summary::-webkit-details-marker{display:none}
   </div>
 </footer>
 
+<div class="ck" id="ck" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos una cookie de analítica para saber qué secciones se leen y mejorar la página. Puedes rechazarla y seguir navegando igual. <a href="https://activemur.es/wp-content/uploads/2024/09/politica_cookies.pdf" target="_blank" rel="noopener">Política de cookies</a>.</p>
+  <div class="ck__b">
+    <button type="button" id="ckSi">Aceptar analítica</button>
+    <button type="button" id="ckNo">Solo lo necesario</button>
+  </div>
+</div>
+
 <div class="mcta" id="mcta">
   <a class="btn btn--linea" href="tel:+34968237316">Llamar</a>
   <a class="btn" href="#asesoramiento">Solicita asesoramiento</a>
 </div>
 
 <script>
+/* ============================================================
+   ANALÍTICA
+   Pega aquí el ID de medición de GA4 (formato G-XXXXXXXXXX).
+   Si lo dejas vacío, no se carga nada, no aparece el aviso de
+   cookies y la página no hace ni una petición a terceros.
+   ============================================================ */
+window.ACTIVEMUR_GA4 = "";
+
 (function(){
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* --- Consentimiento y carga de GA4 --- */
+  var GA = window.ACTIVEMUR_GA4 || "";
+  var KEY = "activemur-cookies";
+  var ck = document.getElementById("ck");
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+
+  function loadGA(){
+    if (!GA) return;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA);
+    document.head.appendChild(s);
+    window.gtag("js", new Date());
+    window.gtag("config", GA, { anonymize_ip: true, send_page_view: true });
+  }
+
+  function decide(accept){
+    try { localStorage.setItem(KEY, accept ? "1" : "0"); } catch(e){}
+    if (ck) ck.classList.remove("on");
+    if (accept) loadGA();
+  }
+
+  try {
+    var saved = localStorage.getItem(KEY);
+    if (saved === "1") loadGA();
+    else if (saved === null && GA && ck) setTimeout(function(){ ck.classList.add("on"); }, 1200);
+  } catch(e){}
+
+  if (ck){
+    var si = document.getElementById("ckSi"), no = document.getElementById("ckNo");
+    if (si) si.addEventListener("click", function(){ decide(true); });
+    if (no) no.addEventListener("click", function(){ decide(false); });
+  }
   var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
 
   var hd = document.getElementById("hd"), mcta = document.getElementById("mcta");
@@ -818,6 +880,9 @@ summary::-webkit-details-marker{display:none}
   function track(ev, data){
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(Object.assign({event:ev}, data||{}));
+    if (typeof window.gtag === "function" && window.ACTIVEMUR_GA4){
+      window.gtag("event", ev, data || {});
+    }
   }
 
   form.addEventListener("submit", function(e){
@@ -881,9 +946,48 @@ summary::-webkit-details-marker{display:none}
     });
   });
 
-  document.querySelectorAll('a[href="#asesoramiento"]').forEach(function(a){
-    a.addEventListener("click", function(){ track("cta_click", {where: a.textContent.trim().slice(0,30)}); });
+  /* CTA principales */
+  document.querySelectorAll('a[href="#asesoramiento"]:not(.card__link), a.btn[href="tel:+34968237316"]').forEach(function(a){
+    a.addEventListener("click", function(){
+      track("cta_click", {where: a.textContent.trim().slice(0,30), seccion: (a.closest("section")||{}).id || "header"});
+    });
   });
+
+  /* Qué solución despierta interés (enlace de cada tarjeta) */
+  document.querySelectorAll(".card__link").forEach(function(a){
+    a.addEventListener("click", function(){
+      var card = a.closest(".card");
+      var titulo = card ? card.querySelector("h3").textContent.trim() : "";
+      track("solucion_click", {solucion: titulo});
+    });
+  });
+
+  /* Llamadas y emails */
+  document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"]').forEach(function(a){
+    a.addEventListener("click", function(){
+      track("contacto_click", {tipo: a.getAttribute("href").split(":")[0]});
+    });
+  });
+
+  /* FAQ */
+  document.querySelectorAll(".faq summary").forEach(function(s){
+    s.addEventListener("click", function(){
+      setTimeout(function(){
+        if (s.parentElement.open) track("faq_open", {pregunta: s.textContent.trim().slice(0,60)});
+      }, 40);
+    });
+  });
+
+  /* Profundidad de lectura (una sola vez al 75 %) */
+  var leido = false;
+  window.addEventListener("scroll", function(){
+    if (leido) return;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if (h > 0 && (window.scrollY / h) > 0.75){
+      leido = true;
+      track("scroll_75", {});
+    }
+  }, {passive:true});
 })();
 </script>
 </body>

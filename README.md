@@ -86,6 +86,33 @@ Si el sitio se sirve como estático (GitHub Pages) no hay endpoint: el formulari
 el fallo y ofrece **enviar la misma solicitud por email con los datos ya rellenados**, o
 llamar por teléfono.
 
+## Medición (GA4)
+
+En la cabecera del `<script>`, una sola línea:
+
+```js
+window.ACTIVEMUR_GA4 = "";   // pega aquí tu ID: G-XXXXXXXXXX
+```
+
+- **Vacío** → no se carga nada, no aparece el aviso de cookies y la página no hace
+  ni una petición a terceros. Así está ahora.
+- **Con ID** → aparece un aviso de cookies discreto; la analítica solo se carga si el
+  visitante acepta. La decisión se guarda en `localStorage`.
+
+Eventos enviados, a `dataLayer` y a GA4:
+
+| Evento | Cuándo | Datos |
+|---|---|---|
+| `cta_click` | clic en un CTA principal | `where`, `seccion` |
+| `solucion_click` | clic en «Quiero saber más» | `solucion` |
+| `contacto_click` | clic en teléfono o email | `tipo` |
+| `faq_open` | abrir una pregunta | `pregunta` |
+| `scroll_75` | llegar al 75 % (una vez) | — |
+| `lead_submit` | formulario enviado | `lead_temp`, `solucion` |
+| `lead_fallback` | fallo de envío, se ofrece email | `reason` |
+
+Para marcar la conversión: GA4 → **Administrar → Eventos → `lead_submit` como conversión**.
+
 ## Eventos de medición
 
 `window.dataLayer` recibe `cta_click` (con `where`), `form_step2` y `lead_submit`
