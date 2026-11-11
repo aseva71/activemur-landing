@@ -28,11 +28,12 @@ dev-server.js         servidor local con el endpoint incluido (npm run dev)
 
 | Dato | Valor |
 |---|---|
-| Archivo | `media/hero.mp4` (H.264, 1720×968, 8 s, sin audio, `faststart`) |
-| Peso | ≈1,6 MB · poster `hero-poster.jpg` 137 KB |
+| Archivo | `media/hero.mp4` (H.264, 1600×800, 2:1, 8 s, sin audio, `faststart`) |
+| Peso | ≈1,5 MB · poster `hero-poster.jpg` 101 KB |
 | Comportamiento | autoplay, mute, loop, `playsinline` |
-| Encuadre | el original (1024×784) se ha montado sobre un lienzo 16:9 con los laterales desenfocados: no se recorta a nadie |
-| En móvil | el vídeo pasa a banda superior de 208–286 px y el copy va sobre fondo sólido, para que la escena se vea entera |
+| Encuadre | el original (1024×784) se recorta solo por abajo (`crop=1024:512:0:0`) para pasar a 2:1: se conservan las tres cabezas y los gestos |
+| Colocación | el vídeo es una pieza propia en un marco 2:1 a la derecha del texto, no un fondo con degradado: así no queda nadie tapado |
+| En móvil / tablet | sube arriba a ancho completo y el copy va debajo sobre fondo sólido |
 | Accesibilidad | botón de pausa (38 px, esquina inferior derecha; en móvil dentro de la banda), `aria-pressed`, se pausa al ocultar la pestaña |
 | `prefers-reduced-motion` | no arranca: se queda el poster y el botón pasa a «reproducir» |
 
