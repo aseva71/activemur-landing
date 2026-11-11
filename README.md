@@ -15,7 +15,11 @@ dev-server.js         servidor local con el endpoint incluido (npm run dev)
 
 ### Diseño
 
-- **Sistema:** tema oscuro técnico (referencia «craftsman»). Fondo `#05090C`, superficie `#0A1418`, texto `#B3C8D2`, acento cian `#33D6E8`; el verde de marca `#31A58D` y el azul `#086B9B` quedan como acentos y degradados.
+- **Sistema:** dos temas conmutables como la referencia «craftsman», controlados por `data-theme` en `<html>` y variables CSS.
+  - Claro (por defecto): fondo `#FFFFFF`, superficie `#F7FBFC`, tinta `#0D2634`, cuerpo `#3D5A69`, acento `#0A7F95`.
+  - Oscuro: fondo `#05090C`, superficie `#0A1418`, tinta `#EAF4F8`, acento `#33D6E8`.
+  - El hero y el bloque «El problema real» y el cierre son oscuros en ambos temas (el vídeo y el formulario mandan).
+  - Botón sol/luna en la cabecera, persistencia en `localStorage` (`activemur-tema`) y arranque según `prefers-color-scheme` con un script inline anti-destello.
 - **Tipografía:** Manrope (400–800) para titulares y texto; monoespaciada del sistema para etiquetas, numeración y datos.
 - **Recursos del lenguaje:** rejillas finas de 4–5 rem, tarjetas con borde de 1 px, numeración `01…07`, glow cian muy contenido, hover con desplazamiento mínimo.
 - **Bloques:** hero a pantalla completa con vídeo · situación actual (3 tarjetas) · 5 soluciones ·
