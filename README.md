@@ -1,11 +1,11 @@
 # Activemur — landing de captación
 
 Página única para captar solicitudes de asesoramiento (hogares y empresas) con un
-formulario de **dos pasos que cualifica el lead** antes de enviarlo.
+formulario **de una sola pantalla** que cualifica el lead antes de enviarlo.
 
 ```
 index.html            toda la página (HTML + CSS + JS, sin dependencias)
-media/                7 fotos reales extraídas de activemur.es
+media/                fotos reales de activemur.es + vídeo del hero (hero.mp4 / hero-poster.jpg)
 fonts/                Manrope + Inter (woff2, servidas en local)
 api/lead.js           endpoint del formulario (solo en Vercel/Netlify)
 vercel.json           cabeceras de caché y seguridad
@@ -17,10 +17,25 @@ dev-server.js         servidor local con el endpoint incluido (npm run dev)
 
 - **Paleta:** azul `#086B9B`, verde agua `#31A58D`, azul muy claro `#EDF7FA`, azul oscuro `#173448`.
 - **Tipografía:** Manrope (400–800), servida en local.
-- **Bloques:** hero a dos columnas · situación actual (3 tarjetas) · 5 soluciones ·
+- **Bloques:** hero a pantalla completa con vídeo · situación actual (3 tarjetas) · 5 soluciones ·
   prueba social · 3 pasos · servicio técnico · FAQ · cierre con formulario.
 - **CTA único:** «Solicita asesoramiento» en todos los puntos de conversión.
-- Sin vídeo: solo fotografía, para mantener el peso bajo (≈220 KB de imágenes).
+- **Hero oscuro con vídeo** de fondo (familia bebiendo agua del grifo) y barra de progreso
+  de lectura, siguiendo el patrón visual de referencia.
+
+### Vídeo del hero
+
+| Dato | Valor |
+|---|---|
+| Archivo | `media/hero.mp4` (H.264, 1280×980, 8 s, sin audio, `faststart`) |
+| Peso | ≈1,3 MB · poster `hero-poster.jpg` 136 KB |
+| Comportamiento | autoplay, mute, loop, `playsinline` |
+| Accesibilidad | botón de pausa (38 px, esquina inferior derecha; en móvil arriba a la derecha), `aria-pressed`, se pausa al ocultar la pestaña |
+| `prefers-reduced-motion` | no arranca: se queda el poster y el botón pasa a «reproducir» |
+
+El vídeo se sirve desde el propio dominio: **no hay peticiones a terceros**. Para cambiarlo,
+sustituye `hero.mp4` y `hero-poster.jpg` manteniendo los nombres (o ajusta las rutas en el
+`<video>` y el `poster`).
 
 Las rutas son **relativas**, así que el sitio funciona igual en la raíz de un dominio
 (Vercel) que en una subcarpeta (`usuario.github.io/repo/`, GitHub Pages).
