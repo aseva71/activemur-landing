@@ -13,10 +13,11 @@ dev-server.js         servidor local con el endpoint incluido (npm run dev)
 .nojekyll             necesario en GitHub Pages
 ```
 
-### Diseño (según la guía del cliente)
+### Diseño
 
-- **Paleta:** azul `#086B9B`, verde agua `#31A58D`, azul muy claro `#EDF7FA`, azul oscuro `#173448`.
-- **Tipografía:** Manrope (400–800), servida en local.
+- **Sistema:** tema oscuro técnico (referencia «craftsman»). Fondo `#05090C`, superficie `#0A1418`, texto `#B3C8D2`, acento cian `#33D6E8`; el verde de marca `#31A58D` y el azul `#086B9B` quedan como acentos y degradados.
+- **Tipografía:** Manrope (400–800) para titulares y texto; monoespaciada del sistema para etiquetas, numeración y datos.
+- **Recursos del lenguaje:** rejillas finas de 4–5 rem, tarjetas con borde de 1 px, numeración `01…07`, glow cian muy contenido, hover con desplazamiento mínimo.
 - **Bloques:** hero a pantalla completa con vídeo · situación actual (3 tarjetas) · 5 soluciones ·
   prueba social · 3 pasos · servicio técnico · FAQ · cierre con formulario.
 - **CTA único:** «Solicita asesoramiento» en todos los puntos de conversión.
@@ -27,10 +28,12 @@ dev-server.js         servidor local con el endpoint incluido (npm run dev)
 
 | Dato | Valor |
 |---|---|
-| Archivo | `media/hero.mp4` (H.264, 1280×980, 8 s, sin audio, `faststart`) |
-| Peso | ≈1,3 MB · poster `hero-poster.jpg` 136 KB |
+| Archivo | `media/hero.mp4` (H.264, 1720×968, 8 s, sin audio, `faststart`) |
+| Peso | ≈1,6 MB · poster `hero-poster.jpg` 137 KB |
 | Comportamiento | autoplay, mute, loop, `playsinline` |
-| Accesibilidad | botón de pausa (38 px, esquina inferior derecha; en móvil arriba a la derecha), `aria-pressed`, se pausa al ocultar la pestaña |
+| Encuadre | el original (1024×784) se ha montado sobre un lienzo 16:9 con los laterales desenfocados: no se recorta a nadie |
+| En móvil | el vídeo pasa a banda superior de 208–286 px y el copy va sobre fondo sólido, para que la escena se vea entera |
+| Accesibilidad | botón de pausa (38 px, esquina inferior derecha; en móvil dentro de la banda), `aria-pressed`, se pausa al ocultar la pestaña |
 | `prefers-reduced-motion` | no arranca: se queda el poster y el botón pasa a «reproducir» |
 
 El vídeo se sirve desde el propio dominio: **no hay peticiones a terceros**. Para cambiarlo,
