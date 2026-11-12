@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Activemur — Tratamiento de agua y purificación de aire en Murcia</title>
-<meta name="description" content="Más de 25 años cuidando hogares y empresas. Ósmosis inversa, fuentes de agua, descalcificadores y purificación del aire. Solicita asesoramiento sin compromiso.">
+<meta name="description" content="26 años cuidando de ti y de tu agua. Asesoramiento honesto, instalación, revisiones y mantenimiento en Murcia. Solicita asesoramiento sin compromiso.">
 <link rel="canonical" href="https://activemur.es/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mejora el agua que bebes y el aire que respiras — Activemur">
-<meta property="og:description" content="Únete al ahorro saludable. Más de 25 años cuidando hogares y empresas.">
+<meta property="og:description" content="Tu agua en buenas manos. Hoy y siempre. 26 años cuidando de ti y de tu agua.">
 <meta property="og:image" content="media/hero-poster.jpg">
 <meta property="og:locale" content="es_ES">
 <meta name="theme-color" content="#EDF7FA">
@@ -44,6 +44,7 @@
    ============================================================ */
 :root{
   color-scheme:light;
+  --band-body:#b9cfda;
   --bg:#ffffff;--bg-2:#f3f8fa;--bg-3:#eaf2f6;
   --panel:#ffffff;--panel-2:#f7fbfc;--campo:#ffffff;
   --ink:#0d2634;--ink-2:#2a4757;--body:#3d5a69;--muted:#4f6b7a;
@@ -62,6 +63,7 @@
   --fuente:"Manrope","Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
 [data-theme="dark"]{
+  --band-body:#b9cfda;
   color-scheme:dark;
   --bg:#05090c;--bg-2:#070e12;--bg-3:#03080b;
   --panel:#0a1418;--panel-2:#0d1a20;--campo:#060f13;
@@ -411,14 +413,17 @@ summary::-webkit-details-marker{display:none}
 }
 .paso .h3{margin-bottom:.7em;font-size:clamp(1.05rem,1.5vw,1.22rem)}
 .paso p{font-size:.92rem;margin-bottom:.5em}
+.paso h3{min-height:2.7em}
+.pasos{align-items:start}
 .pasos__cierre{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem 1.6rem;margin-top:clamp(34px,4vw,54px);text-align:center}
 .pasos__cierre em{font-style:normal;font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 
 /* 05 · Equipo */
 .equipo{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,4.5vw,68px);align-items:start}
 .equipo__media{
-  margin:0;border-radius:var(--radio-g);overflow:hidden;border:1px solid var(--linea);background:var(--panel);aspect-ratio:4/3
+  margin:0;border-radius:var(--radio-g);overflow:hidden;border:1px solid var(--linea);background:var(--panel);aspect-ratio:4/5
 }
+@media (max-width:900px){.equipo__media{aspect-ratio:4/3}}
 .equipo__media img{width:100%;height:100%;object-fit:cover}
 .equipo__lista{margin-top:.4em;display:grid;gap:.55em}
 .equipo__lista li{display:grid;grid-template-columns:14px 1fr;gap:.7em;font-size:.94rem;color:var(--ink-2)}
@@ -466,9 +471,9 @@ summary::-webkit-details-marker{display:none}
 }
 .cierre__slogan::before{content:"";width:24px;height:2px;background:var(--cian);flex:none}
 .cierre__directo{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;margin:1.2em 0;font-family:var(--mono);font-size:.82rem}
-.cierre__directo a{text-decoration:none;color:var(--ink);border-bottom:1px solid var(--linea-2);padding-bottom:2px;transition:color .2s,border-color .2s}
-.cierre__directo a:hover{color:var(--cian);border-bottom-color:var(--cian)}
-.cierre__final{font-size:.82rem;color:var(--muted);max-width:46ch}
+.cierre__directo a{text-decoration:none;color:#e2eff4;border-bottom:1px solid rgba(226,239,244,.4);padding-bottom:2px;transition:color .2s,border-color .2s}
+.cierre__directo a:hover,.cierre__directo a:focus-visible{color:#7fe6f4;border-bottom-color:#7fe6f4}
+.cierre__final{font-size:.82rem;color:#a8c1cc;max-width:46ch}
 .form{
   background:var(--panel);border:1px solid var(--linea);border-radius:var(--radio-g);
   padding:clamp(22px,2.8vw,34px);box-shadow:0 40px 90px -50px rgba(0,0,0,.95);position:relative
@@ -640,6 +645,20 @@ summary::-webkit-details-marker{display:none}
 }
 
 
+/* Ajustes del copy nuevo: filas de solución y tarjetas de diferenciadores */
+.dif h3::before{display:none}
+.dif h3{font-size:1.02rem;line-height:1.35}
+.dif p{font-size:.95rem;line-height:1.6}
+.solrow__media{max-height:330px}
+.solrow__body p{font-size:1.02rem;line-height:1.65;max-width:44ch;color:var(--body)}
+.prueba__stats dd{color:var(--body);font-size:.9rem}
+.situaciones li span{font-size:.98rem;color:inherit}
+.situaciones li{color:var(--body)}
+.retorica{list-style:none;margin:1em 0;padding:0;display:grid;gap:.35em}
+.retorica li{position:relative;padding-left:1.2em;color:var(--band-body)}
+.retorica li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:1px;background:var(--cian)}
+.cierre__slogan{font-size:clamp(1.2rem,2vw,1.6rem);font-weight:800;letter-spacing:-.03em;color:var(--cian);margin-top:1.1em}
+</style>
 </style>
 </head>
 <body>
@@ -698,15 +717,16 @@ summary::-webkit-details-marker{display:none}
     <div class="hero__in">
       <div class="hero__txt">
         <div class="hero__tags">
-          <span class="tag tag--acento">Más de 25 años en Murcia</span>
+          <span class="tag tag--acento">26 años en Murcia</span>
           <span class="tag">Hogares y empresas</span>
         </div>
-        <h1 class="h1">Mejora el agua que bebes<br class="br-wide"> y el&nbsp;aire que <em>respiras</em></h1>
-        <p class="hero__sub">Más de 25 años cuidando hogares y empresas.</p>
+        <h1 class="h1">Tu agua en buenas manos.<br class="br-wide"> <em>Hoy y siempre.</em></h1>
+        <p class="hero__sub">26 años cuidando de ti y de tu agua.</p>
         <div class="hero__copy">
-          <p>Vas a beber agua durante toda tu vida. Preocúpate de que sea de calidad.</p>
-          <p>En Activemur te ayudamos a encontrar soluciones de tratamiento de agua y purificación del aire adaptadas a tu hogar o empresa.</p>
-          <p>Más comodidad. Menos preocupaciones. Y el respaldo de profesionales con más de 25 años de experiencia.</p>
+          <p>Elegir un sistema de tratamiento de agua es importante. Pero saber que siempre tendrás a alguien que responda lo es todavía más.</p>
+          <p>En <strong>Activemur</strong> no nos limitamos a venderte un equipo.</p>
+          <p>Te asesoramos, lo instalamos, nos ocupamos de sus revisiones anuales y te avisamos cuando necesita mantenimiento.</p>
+          <p>Porque queremos que disfrutes del agua de tu hogar con la tranquilidad de estar bien acompañado.</p>
         </div>
         <div class="hero__actions">
           <a class="btn" href="#asesoramiento">Solicita asesoramiento
@@ -714,15 +734,15 @@ summary::-webkit-details-marker{display:none}
           </a>
           <a class="btn btn--linea" href="#soluciones">Descubre nuestras soluciones</a>
         </div>
-        <p class="hero__lema">Únete al ahorro saludable.</p>
+        <p class="hero__lema">Activemur · Únete al ahorro saludable</p>
         <div class="hero__bottom">
           <div class="hero__trust">
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Sin compromiso</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg>Te llamamos nosotros</span>
           </div>
           <dl class="hero__stats">
-            <div><dt>+25</dt><dd>Años de experiencia</dd></div>
-            <div><dt>5</dt><dd>Familias de soluciones</dd></div>
+            <div><dt>26</dt><dd>Años de experiencia</dd></div>
+            <div><dt>90%</dt><dd>Clientes particulares</dd></div>
             <div><dt>1:1</dt><dd>Asesoramiento sin coste</dd></div>
           </dl>
         </div>
@@ -740,7 +760,7 @@ summary::-webkit-details-marker{display:none}
 
   <div class="strip">
     <div class="strip__in">
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Más de 25 años de experiencia</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>26 años de experiencia</div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>5 familias de soluciones</div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Hogares y empresas</div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Instalación y mantenimiento</div>
@@ -752,48 +772,39 @@ summary::-webkit-details-marker{display:none}
     <div class="wrap">
       <div class="sec__head fade">
         <span class="eyebrow">01 — ¿Te sientes identificado?</span>
-        <h2 class="h2">Hay cosas que haces todos los días y que podrías hacer mucho más fáciles.</h2>
+        <h2 class="h2">Comprar un equipo de tratamiento de agua es fácil. Encontrar una empresa de confianza, no tanto.</h2>
       </div>
 
-      <ol class="gestos fade">
-        <li>Beber agua.</li>
-        <li>Cocinar.</li>
-        <li>Ducharte.</li>
-        <li>Limpiar tu hogar.</li>
-        <li>Respirar el aire de los espacios donde pasas tantas horas.</li>
-      </ol>
-
-      <div class="prosa fade" style="max-width:58ch">
-        <p>Son gestos cotidianos a los que apenas prestamos atención.</p>
-        <p>Hasta que empiezan las incomodidades.</p>
+      <div class="prosa fade" style="max-width:62ch">
+        <p>Quizá llevas tiempo pensando en mejorar el agua de tu casa.</p>
+        <p>Quieres dejar de cargar botellas, reducir los problemas de cal o encontrar un sistema que se adapte mejor a las necesidades de tu familia.</p>
+        <p>Empiezas a buscar información.</p>
+        <p>Comparas equipos, precios y tecnologías.</p>
+        <p>Y cuanto más investigas, más dudas aparecen.</p>
       </div>
 
       <div class="fade" style="margin-top:clamp(26px,3.2vw,40px)">
-        <h3 class="h3" style="margin-bottom:1em">Lo habitual es encontrarte con situaciones como estas:</h3>
+        <h3 class="h3" style="margin-bottom:1em">Lo habitual en este punto es:</h3>
         <ul class="situaciones">
-          <li><b>01</b><span>Comprar garrafas de agua cada semana porque no te convence el sabor del grifo.</span></li>
-          <li><b>02</b><span>Cargar con botellas pesadas desde el supermercado hasta casa.</span></li>
-          <li><b>03</b><span>Acumular envases de plástico que ocupan espacio.</span></li>
-          <li><b>04</b><span>Gastar dinero continuamente en agua embotellada.</span></li>
-          <li><b>05</b><span>Encontrarte manchas de cal en grifos y mamparas.</span></li>
-          <li><b>06</b><span>Tener problemas relacionados con la dureza del agua.</span></li>
-          <li><b>07</b><span>Querer disponer de agua fría o a diferentes temperaturas sin complicaciones.</span></li>
-          <li><b>08</b><span>Preocuparte por la calidad del aire interior.</span></li>
-          <li><b>09</b><span>No saber qué sistema de tratamiento de agua necesitas.</span></li>
-          <li><b>10</b><span>Tener dudas sobre el mantenimiento, la instalación o el precio.</span></li>
+          <li><b>01</b><span>No saber qué sistema de tratamiento de agua necesitas realmente.</span></li>
+          <li><b>02</b><span>Encontrar empresas que te recomiendan equipos diferentes sin explicarte por qué.</span></li>
+          <li><b>03</b><span>Tener miedo de gastar dinero en algo que no solucione tu problema.</span></li>
+          <li><b>04</b><span>Desconocer cuánto costarán las revisiones y el mantenimiento.</span></li>
+          <li><b>05</b><span>Preguntarte quién responderá si el equipo se avería.</span></li>
+          <li><b>06</b><span>No querer estar pendiente de cuándo hay que cambiar filtros o revisar la instalación.</span></li>
+          <li><b>07</b><span>Desconfiar de vendedores que prometen demasiado y después desaparecen.</span></li>
+          <li><b>08</b><span>Querer una empresa seria, cercana y que te diga la verdad.</span></li>
         </ul>
       </div>
 
-      <div class="prosa fade" style="max-width:58ch;margin-top:1.6em">
-        <p>Y cuando empiezas a buscar soluciones, descubres que hay tantas opciones que resulta difícil decidir.</p>
+      <div class="fade" style="margin-top:clamp(28px,3.4vw,44px);max-width:62ch">
+        <p class="h3" style="margin-bottom:.6em">Y hay una pregunta que muchas personas se hacen demasiado tarde:</p>
+        <p style="font-size:clamp(1.15rem,1.9vw,1.5rem);font-weight:700;color:var(--ink);letter-spacing:-.025em;line-height:1.3">¿Quién se va a ocupar de mi equipo después de instalarlo?</p>
+        <div class="prosa" style="margin-top:1em">
+          <p>Porque un sistema de tratamiento de agua no es algo que compras y olvidas.</p>
+          <p>Necesita revisiones, mantenimiento y profesionales que sepan cómo ayudarte cuando surge un problema.</p>
+        </div>
       </div>
-
-      <ul class="preguntas fade">
-        <li>¿Ósmosis inversa o descalcificador?</li>
-        <li>¿Con depósito o de flujo directo?</li>
-        <li>¿Una fuente de agua o un enfriador?</li>
-        <li>¿Qué equipo necesita mi hogar o mi empresa?</li>
-      </ul>
     </div>
   </section>
 
@@ -801,12 +812,9 @@ summary::-webkit-details-marker{display:none}
   <section class="band">
     <div class="wrap">
       <p class="eyebrow">El problema real</p>
-      <p class="band__claim"><strong>No necesitas saberlo todo</strong> sobre tratamiento de agua o purificación del aire. Necesitas encontrar una solución adecuada y profesionales que te ayuden a elegirla.</p>
+      <p class="band__claim">No es solo encontrar un <strong>buen equipo</strong>.</p>
       <div class="band__cierre">
-        <p>Porque cada hogar es diferente.</p>
-        <p>Cada empresa tiene necesidades distintas.</p>
-        <p>Y lo importante no es instalar cualquier equipo.</p>
-        <p><em>Es instalar el que realmente necesitas.</em></p>
+        <p>Es encontrar una empresa en la que puedas confiar antes de comprarlo y durante todos los años que lo utilices.</p>
       </div>
     </div>
   </section>
@@ -817,20 +825,37 @@ summary::-webkit-details-marker{display:none}
       <div class="intro-sol">
         <div class="sec__head fade" style="margin-bottom:0">
           <span class="eyebrow">02 — Nuestra solución</span>
-          <h2 class="h2">Por eso, en Activemur empezamos escuchándote.</h2>
+          <h2 class="h2">En Activemur no queremos venderte un equipo y desaparecer.</h2>
         </div>
         <div class="prosa fade">
-          <p>Antes de recomendarte un equipo, queremos conocer tu situación.</p>
-          <p>Cómo utilizas el agua.</p>
-          <p>Qué te gustaría mejorar.</p>
-          <p>Qué problemas quieres resolver.</p>
-          <p>Y qué solución encaja con tus necesidades y presupuesto.</p>
-          <p>Llevamos más de 25 años ofreciendo sistemas de tratamiento de agua y purificación del aire para hogares y empresas.</p>
-          <p><strong style="color:var(--ink)">Nuestra misión es ayudarte a disfrutar de una vida más cómoda, con soluciones que tengan sentido para ti.</strong></p>
+          <p>Queremos que tengas la tranquilidad de saber que siempre habrá alguien al otro lado del teléfono.</p>
+          <p>Por eso, antes de hablarte de modelos o precios, nos paramos a escucharte.</p>
+          <p style="margin-bottom:.4em"><strong style="color:var(--ink)">Queremos saber:</strong></p>
+          <ul class="equipo__lista" style="margin-top:.2em">
+            <li>Cómo es el agua de tu vivienda.</li>
+            <li>Qué problemas necesitas solucionar.</li>
+            <li>Cuántas personas utilizáis el agua en casa.</li>
+            <li>Qué esperas conseguir con tu equipo.</li>
+            <li>Qué presupuesto se adapta a tus posibilidades.</li>
+            <li>Qué mantenimiento necesitará la solución que elijas.</li>
+          </ul>
+          <p style="margin-top:1em">Porque no existe un sistema perfecto para todo el mundo.</p>
+          <p>Existe el sistema adecuado para tus necesidades.</p>
+          <p>Y nuestra responsabilidad es ayudarte a encontrarlo.</p>
         </div>
       </div>
 
-      <h3 class="h3 fade" style="margin-top:clamp(34px,4vw,54px);font-size:clamp(1.1rem,1.7vw,1.45rem)">Descubre nuestras soluciones</h3>
+      <h3 class="h3 fade" style="margin-top:clamp(34px,4vw,54px);font-size:clamp(1.1rem,1.7vw,1.45rem)">Lo que hace diferente a Activemur</h3>
+      <div class="dif">
+        <div class="fade"><h3>🤝 Honestidad por encima de cualquier venta</h3><p>No vamos a recomendarte un equipo que no necesitas. Preferimos perder una venta antes que conseguir un cliente mediante engaños.</p><p>Porque nuestra reputación y tu confianza valen mucho más que una operación puntual.</p></div>
+        <div class="fade"><h3>🔧 Técnicos profesionales que se identifican</h3><p>Cuando nuestros técnicos acuden a tu domicilio, sabes quién está entrando en tu casa.</p><p>Se identifican, realizan su trabajo con seriedad y te explican lo que necesitas saber.</p><p>Queremos que te sientas cómodo y seguro durante todo el proceso.</p></div>
+        <div class="fade"><h3>📅 Nos acordamos de tus revisiones por ti</h3><p>No tienes que estar pendiente del calendario ni preguntarte cuándo toca revisar tu equipo.</p><p>En Activemur te avisamos cuando corresponde realizar el mantenimiento anual.</p><p>Así te ayudamos a conservarlo en buenas condiciones.</p></div>
+        <div class="fade"><h3>📞 Siempre sabes a quién llamar</h3><p>No desaparecemos después de la instalación.</p><p>Te facilitamos un teléfono de contacto para que puedas localizarnos cuando tengas una duda o incidencia.</p><p>Porque nuestro compromiso no termina cuando cobramos.</p></div>
+        <div class="fade"><h3>🛡️ 26 años de experiencia a tu servicio</h3><p>Llevamos más de dos décadas trabajando con sistemas de tratamiento de agua.</p><p>Esa experiencia nos permite asesorarte con criterio, realizar instalaciones profesionales y acompañarte durante el mantenimiento de tu equipo.</p></div>
+        <div class="fade"><h3>💧 Soluciones adaptadas a tu hogar</h3><p>Trabajamos con diferentes tecnologías para ofrecerte la solución que realmente necesitas:</p><p>No se trata de venderte la tecnología más sofisticada. Se trata de encontrar la que mejor encaja contigo.</p></div>
+      </div>
+
+      <h3 class="h3 fade" style="margin-top:clamp(40px,5vw,68px);font-size:clamp(1.1rem,1.7vw,1.45rem)">Soluciones adaptadas a tu hogar</h3>
 
       <div class="solrows">
         <article class="solrow fade">
@@ -838,85 +863,52 @@ summary::-webkit-details-marker{display:none}
           <div class="solrow__body">
             <p class="solrow__num">01</p>
             <h3 class="h3">Ósmosis inversa</h3>
-            <p class="solrow__kicker">Agua tratada directamente desde tu grifo</p>
-            <p>¿Te imaginas olvidarte de cargar garrafas cada semana?</p>
-            <p>Con nuestros sistemas de ósmosis inversa puedes disponer de agua tratada en tu hogar para beber y cocinar.</p>
-            <p>Ofrecemos equipos de flujo directo sin depósito y soluciones para renovar instalaciones tradicionales.</p>
-            <ul class="solrow__bullets">
-              <li>Reduce tu dependencia del agua embotellada.</li>
-              <li>Evita transportar y almacenar tantas garrafas.</li>
-              <li>Disfruta de mayor comodidad en tu cocina.</li>
-              <li>Valora una alternativa que puede generar ahorro a largo plazo.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="solrow fade">
-          <figure class="solrow__media"><img src="media/sol-fuentes.jpg" alt="Fuente de agua Activemur" loading="lazy" width="720" height="900"></figure>
-          <div class="solrow__body">
-            <p class="solrow__num">02</p>
-            <h3 class="h3">Fuentes de agua</h3>
-            <p class="solrow__kicker">Comodidad para hogares y empresas</p>
-            <p>Tener agua disponible a la temperatura que prefieres puede hacer tu día a día mucho más sencillo.</p>
-            <p>Disponemos de fuentes y dispensadores con distintas opciones de temperatura.</p>
-            <p>Soluciones para viviendas, oficinas y espacios de trabajo.</p>
-            <p>Porque disponer de agua de forma cómoda también es importante fuera de casa.</p>
+            <p>Agua tratada directamente en tu cocina, con la posibilidad de reducir tu dependencia del agua embotellada.</p>
           </div>
         </article>
 
         <article class="solrow fade">
           <figure class="solrow__media"><img src="media/sol-descalcificador.jpg" alt="Descalcificador automático" loading="lazy" width="688" height="900"></figure>
           <div class="solrow__body">
-            <p class="solrow__num">03</p>
+            <p class="solrow__num">02</p>
             <h3 class="h3">Descalcificadores</h3>
-            <p class="solrow__kicker">Menos problemas asociados a la cal</p>
-            <p>La dureza del agua puede provocar incrustaciones y molestias en las instalaciones domésticas.</p>
-            <p>Marcas en mamparas.</p>
-            <p>Acumulación de cal en grifos.</p>
-            <p>Depósitos en tuberías y determinados electrodomésticos.</p>
-            <p>Nuestros descalcificadores automáticos están diseñados para reducir la dureza del agua y los problemas asociados.</p>
+            <p>Ayudan a reducir la dureza del agua y los problemas asociados a la cal.</p>
           </div>
         </article>
 
         <article class="solrow fade">
           <figure class="solrow__media"><img src="media/sol-hidrogenacion.jpg" alt="Equipo de hidrogenación de agua" loading="lazy" width="688" height="900"></figure>
           <div class="solrow__body">
-            <p class="solrow__num">04</p>
-            <h3 class="h3">Enfriadores e hidrogenación</h3>
-            <p class="solrow__kicker">Más opciones para tu agua</p>
-            <p>No todos buscamos lo mismo.</p>
-            <p>Por eso también ofrecemos sistemas de enfriamiento y equipos que permiten obtener agua enriquecida con hidrógeno molecular.</p>
-            <p>Te explicamos las características de cada tecnología para ayudarte a valorar cuál se adapta a tus preferencias.</p>
+            <p class="solrow__num">03</p>
+            <h3 class="h3">Agua hidrogenada</h3>
+            <p>Tecnología que incorpora hidrógeno molecular al agua.</p>
           </div>
         </article>
 
         <article class="solrow fade">
-          <figure class="solrow__media"><img src="media/sol-aire.jpg" alt="Purificador de aire de gama alta" loading="lazy" width="688" height="900"></figure>
+          <figure class="solrow__media"><img src="media/sol-fuentes.jpg" alt="Fuente de agua fría y caliente" loading="lazy" width="720" height="900"></figure>
           <div class="solrow__body">
-            <p class="solrow__num">05</p>
-            <h3 class="h3">Purificación del aire y limpieza</h3>
-            <p class="solrow__kicker">Cuida también tus espacios interiores</p>
-            <p>El agua es importante.</p>
-            <p>Pero el aire de los espacios donde vives y trabajas también merece atención.</p>
-            <p>En Activemur disponemos de purificadores de aire, equipos FilterQueen y soluciones de limpieza doméstica.</p>
-            <p>Sistemas pensados para responder a diferentes necesidades de tratamiento del aire interior y limpieza.</p>
+            <p class="solrow__num">04</p>
+            <h3 class="h3">Fuentes de agua fría y caliente</h3>
+            <p>Comodidad para hogares y empresas.</p>
           </div>
         </article>
       </div>
 
-      <h3 class="h3 fade" style="margin-top:clamp(40px,5vw,68px)">¿Qué hace diferente a Activemur?</h3>
-      <div class="dif">
-        <div class="fade"><h3>Más de 25 años de experiencia</h3><p>Una trayectoria dedicada al tratamiento de agua y la purificación del aire.</p></div>
-        <div class="fade"><h3>Asesoramiento personalizado</h3><p>Te ayudamos a entender las opciones y elegir con criterio.</p></div>
-        <div class="fade"><h3>Instalación y servicio técnico</h3><p>Ofrecemos instalación, revisiones y mantenimiento para los equipos correspondientes.</p></div>
-        <div class="fade"><h3>Ahorro potencial a largo plazo</h3><p>Determinadas soluciones pueden ayudarte a reducir gastos recurrentes, como la compra de agua embotellada, dependiendo del consumo y los costes del equipo.</p></div>
-        <div class="fade"><h3>Menos envases de plástico</h3><p>Reducir la compra de botellas de agua también puede ayudarte a generar menos residuos.</p></div>
-        <div class="fade"><h3>Soluciones para hogares y empresas</h3><p>Desde una vivienda particular hasta un negocio, buscamos la alternativa adecuada para cada necesidad.</p></div>
+      <div class="fade" style="margin-top:clamp(30px,4vw,46px);max-width:62ch">
+        <p class="h3" style="margin-bottom:.7em">Nuestro compromiso es sencillo.</p>
+        <div class="prosa">
+          <p>Te escuchamos.</p>
+          <p>Te decimos la verdad.</p>
+          <p>Te recomendamos lo que necesitas.</p>
+          <p>Y seguimos a tu lado después de instalarlo.</p>
+          <p style="margin-top:1em"><strong style="color:var(--ink)">Porque para nosotros, un cliente no es una venta. Es una relación de confianza.</strong></p>
+        </div>
       </div>
 
-      <div class="fade" style="margin-top:clamp(30px,4vw,46px);display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.6rem">
-        <p style="font-weight:750;color:var(--ink);font-size:clamp(1.05rem,1.5vw,1.25rem);letter-spacing:-.02em">Activemur. Únete al ahorro saludable.</p>
-        <a class="btn" href="#asesoramiento">Descubre tu solución
+      <div class="fade" style="margin-top:clamp(26px,3.4vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.6rem">
+        <p style="font-weight:750;color:var(--ink);font-size:clamp(1.05rem,1.5vw,1.25rem);letter-spacing:-.02em">Activemur · Únete al ahorro saludable</p>
+        <a class="btn" href="#asesoramiento">Quiero asesoramiento
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
@@ -929,23 +921,25 @@ summary::-webkit-details-marker{display:none}
       <div class="prueba__grid">
         <div class="fade">
           <span class="eyebrow eyebrow--claro">03 — Lo que dicen de nosotros</span>
-          <p class="anos">+25<span> años</span></p>
-          <h2 class="h2">Más de 25 años de experiencia no se improvisan.</h2>
+          <p class="anos">+26<span> años</span></p>
+          <h2 class="h2">La confianza no se promete. Se demuestra durante años.</h2>
           <div class="prosa" style="margin-top:1.1em;color:var(--body)">
-            <p>Cuando eliges un sistema de tratamiento de agua, no solo estás comprando un equipo.</p>
-            <p>También estás confiando en las personas que te asesoran, lo instalan y te ayudan a mantenerlo.</p>
-            <p>Y esa confianza importa.</p>
-            <p>En Activemur llevamos más de dos décadas trabajando para ofrecer soluciones a hogares y empresas.</p>
+            <p>En Activemur llevamos 26 años trabajando con una idea muy clara:</p>
+            <p>La mejor forma de conseguir clientes fieles es hacer las cosas bien desde el principio.</p>
+            <p>No necesitamos prometer milagros.</p>
+            <p>Necesitamos cumplir nuestra palabra.</p>
+            <p>Atender cuando nos necesitan.</p>
+            <p>Y demostrar que pueden seguir contando con nosotros después de la instalación.</p>
           </div>
         </div>
 
         <div class="fade">
-          <h3 class="h3" style="color:var(--ink);margin-bottom:.9em">Nuestros números</h3>
+          <h3 class="h3" style="color:var(--ink);margin-bottom:.9em">Nuestros números:</h3>
           <dl class="prueba__stats" style="margin-top:0;border-top:0;padding-top:0">
-            <div><dt>+25 años</dt><dd>de experiencia en el sector.</dd></div>
-            <div><dt>5 familias de soluciones</dt><dd>de tratamiento de agua, purificación del aire y limpieza.</dd></div>
-            <div><dt>Hogares y empresas</dt><dd>como ámbitos de servicio.</dd></div>
-            <div><dt>Instalación y mantenimiento</dt><dd>técnico.</dd></div>
+            <div><dt>26 años</dt><dd>de trayectoria profesional en tratamiento de agua.</dd></div>
+            <div><dt>90 % de clientes particulares</dt><dd>aunque también trabajamos con empresas.</dd></div>
+            <div><dt>Servicio integral</dt><dd>asesoramiento, instalación, revisiones y mantenimiento.</dd></div>
+            <div><dt>Cobertura regional</dt><dd>Murcia y determinadas zonas de Alicante, Albacete, Almería y Valencia.</dd></div>
           </dl>
 
           <h3 class="h3" style="color:var(--ink);margin:1.8em 0 .9em">La experiencia de nuestros clientes</h3>
@@ -959,16 +953,13 @@ summary::-webkit-details-marker{display:none}
             </figcaption>
           </figure>
 
-          <h3 class="h3" style="color:var(--ink);margin:1.8em 0 .9em">Confían en nosotros</h3>
+          <h3 class="h3" style="color:var(--ink);margin:1.8em 0 .9em">Confían en nosotros:</h3>
           <div class="huecos">
-            <div class="hueco"><b>Pendiente</b>Testimonio real de cliente con sistema de ósmosis</div>
-            <div class="hueco"><b>Pendiente</b>Testimonio real de cliente con descalcificador</div>
-            <div class="hueco"><b>Pendiente</b>Testimonio real de empresa con fuente de agua</div>
-            <div class="hueco"><b>Pendiente</b>Reseñas verificadas de Google</div>
-            <div class="hueco"><b>Pendiente</b>Logotipos reales de empresas clientes</div>
+            <div class="hueco"><b>Espacio reservado</b>Logotipos reales de empresas clientes y colaboradores</div>
+            <div class="hueco"><b>Espacio reservado</b>Reseñas auténticas de clientes que destaquen la atención recibida, la seriedad de los técnicos y el mantenimiento posterior</div>
           </div>
 
-          <p class="prueba__cierre">La mejor garantía de confianza es conocer experiencias reales.</p>
+          <p class="prueba__cierre">Lo que más nos importa no es que nos elijas una vez. Es que, dentro de muchos años, sigas teniendo motivos para confiar en nosotros.</p>
         </div>
       </div>
     </div>
@@ -979,10 +970,11 @@ summary::-webkit-details-marker{display:none}
     <div class="wrap">
       <div class="sec__head sec__head--centro fade">
         <span class="eyebrow">04 — Cómo empezar</span>
-        <h2 class="h2">Encontrar la solución adecuada puede ser más fácil de lo que imaginas.</h2>
+        <h2 class="h2">Encontrar la solución adecuada para tu agua puede ser mucho más sencillo de lo que imaginas.</h2>
         <div class="prosa" style="margin-top:1em">
-          <p>No necesitas conocer todas las tecnologías.</p>
-          <p>Ni comparar decenas de equipos por tu cuenta.</p>
+          <p>No necesitas conocer las diferencias técnicas entre todos los equipos.</p>
+          <p>Ni saber qué filtros necesitas.</p>
+          <p>Ni entender cómo funciona un descalcificador.</p>
           <p>Para eso estamos nosotros.</p>
         </div>
       </div>
@@ -991,31 +983,36 @@ summary::-webkit-details-marker{display:none}
         <div class="paso fade">
           <span class="paso__n">01</span>
           <h3 class="h3">Cuéntanos qué necesitas</h3>
-          <p>Solicita asesoramiento y explícanos qué te gustaría mejorar.</p>
-          <p>¿Quieres dejar de comprar garrafas?</p>
-          <p>¿Tienes problemas con la cal?</p>
-          <p>¿Necesitas una fuente de agua para tu empresa?</p>
-          <p>¿Quieres mejorar el tratamiento del aire interior?</p>
-          <p>Empezaremos por escucharte.</p>
+          <p>Ponte en contacto con Activemur y explícanos qué quieres mejorar.</p>
+          <p>¿El agua que bebes?</p>
+          <p>¿Los problemas de cal?</p>
+          <p>¿La comodidad de disponer de agua fría y caliente?</p>
+          <p>¿El mantenimiento de un equipo que ya tienes?</p>
+          <p style="font-weight:700;color:var(--ink)">Te escuchamos.</p>
         </div>
         <div class="paso fade">
           <span class="paso__n">02</span>
-          <h3 class="h3">Te ayudamos a encontrar la solución adecuada</h3>
-          <p>Analizaremos tus necesidades y te explicaremos las opciones disponibles.</p>
-          <p>Hablaremos de las características de los equipos, su funcionamiento, instalación, mantenimiento y modalidades de adquisición.</p>
-          <p>Para que puedas comparar con información clara.</p>
+          <h3 class="h3">Te asesoramos con honestidad</h3>
+          <p>Analizamos contigo las necesidades de tu hogar y te explicamos las soluciones disponibles.</p>
+          <p>Qué puede aportar cada sistema.</p>
+          <p>Qué mantenimiento necesita.</p>
+          <p>Y qué opción puede adaptarse mejor a tu vivienda y presupuesto.</p>
+          <p style="font-weight:700;color:var(--ink)">Sin tecnicismos innecesarios.</p>
+          <p style="font-weight:700;color:var(--ink)">Sin presiones.</p>
+          <p style="font-weight:700;color:var(--ink)">Sin recomendarte algo que no necesitas.</p>
         </div>
         <div class="paso fade">
           <span class="paso__n">03</span>
-          <h3 class="h3">Tú decides cómo avanzar</h3>
-          <p>Una vez conozcas las alternativas, podrás valorar cuál encaja mejor contigo.</p>
-          <p>Si decides continuar, te explicaremos los siguientes pasos.</p>
-          <p style="font-weight:700;color:var(--ink)">Sin tener que elegir a ciegas.</p>
+          <h3 class="h3">Tú decides. Nosotros seguimos a tu lado.</h3>
+          <p>Si decides avanzar, nos encargamos de organizar la instalación.</p>
+          <p>Y después seguimos pendientes de tu equipo.</p>
+          <p>Te avisamos de las revisiones y te facilitamos una forma de contactar con nosotros cuando necesites ayuda.</p>
+          <p style="font-weight:700;color:var(--ink)">Porque queremos que tengas una solución para tu agua y una empresa de confianza a tu lado.</p>
         </div>
       </div>
 
       <div class="pasos__cierre fade">
-        <a class="btn" href="#asesoramiento">Solicita asesoramiento
+        <a class="btn" href="#asesoramiento">Quiero asesoramiento
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <em>Te escuchamos, te orientamos y tú decides.</em>
@@ -1029,28 +1026,30 @@ summary::-webkit-details-marker{display:none}
       <div class="equipo">
         <div class="fade">
           <span class="eyebrow">05 — El equipo</span>
-          <h2 class="h2" style="margin:.5em 0 .7em">Más de 25 años de experiencia. Personas que te acompañan.</h2>
+          <h2 class="h2" style="margin:.5em 0 .7em">Detrás de cada instalación hay personas que responden.</h2>
           <div class="prosa">
-            <p>Detrás de Activemur hay profesionales dedicados al tratamiento de agua y la purificación del aire.</p>
-            <p>Personas que conocen los equipos, las tecnologías y las necesidades que pueden surgir antes y después de una instalación.</p>
-            <p>Porque tan importante como elegir un buen sistema es saber a quién acudir cuando necesitas asesoramiento o mantenimiento.</p>
+            <p>Cuando un técnico entra en tu casa, le estás confiando algo importante.</p>
+            <p>Tu hogar.</p>
+            <p>Tu tiempo.</p>
+            <p>Y tu tranquilidad.</p>
+            <p>En Activemur somos conscientes de esa responsabilidad.</p>
+            <p>Por eso nuestros técnicos se identifican al acudir a tu domicilio y trabajan con la seriedad que merece tu confianza.</p>
+            <p>Pero nuestro compromiso va más allá de hacer una buena instalación.</p>
           </div>
-          <h3 class="h3" style="margin:1.4em 0 .5em">Nuestro compromiso es ayudarte a elegir bien.</h3>
+          <h3 class="h3" style="margin:1.4em 0 .5em">Queremos que sepas que puedes contar con nosotros cuando necesites ayuda.</h3>
           <ul class="equipo__lista">
-            <li>Escuchamos tus necesidades.</li>
-            <li>Te explicamos las alternativas.</li>
-            <li>Y ponemos a tu disposición nuestros servicios técnicos de instalación, revisión y mantenimiento.</li>
+            <li>Que no tendrás que perseguirnos para saber cuándo toca una revisión.</li>
+            <li>Y que no vamos a recomendarte algo que no creemos adecuado para ti.</li>
+            <li>Llevamos 26 años construyendo nuestra empresa sobre esos principios.</li>
           </ul>
-          <p class="equipo__claim">No queremos que tengas que adaptarte a un equipo. Queremos ayudarte a encontrar uno que se adapte a ti.</p>
+          <p class="equipo__claim"><strong>Seriedad. Honestidad. Experiencia. Cercanía.</strong><br>Son los valores que nos han permitido mantener relaciones duraderas con nuestros clientes. Y son los mismos que queremos ofrecerte a ti.</p>
         </div>
         <div class="fade">
           <figure class="equipo__media">
-            <img src="media/instalacion.jpg" alt="Instalación de un sistema de tratamiento de agua en un armario bajo el fregadero" loading="lazy" width="1000" height="750">
+            <img src="media/instalacion.jpg" alt="Instalación de un sistema de tratamiento de agua en un armario bajo el fregadero" loading="lazy" width="1000" height="1250">
           </figure>
           <div class="huecos" style="margin-top:1rem">
-            <div class="hueco" style="border-color:var(--linea-2);color:var(--muted)"><b style="color:var(--ink)">Pendiente</b>Fotografía real del equipo Activemur</div>
-            <div class="hueco" style="border-color:var(--linea-2);color:var(--muted)"><b style="color:var(--ink)">Pendiente</b>Presentación del fundador o responsable</div>
-            <div class="hueco" style="border-color:var(--linea-2);color:var(--muted)"><b style="color:var(--ink)">Pendiente</b>Fotografías de instalaciones reales</div>
+            <div class="hueco"><b>Espacio reservado</b>Fotografía real del equipo de Activemur y presentación del fundador o responsables técnicos</div>
           </div>
         </div>
       </div>
@@ -1066,34 +1065,44 @@ summary::-webkit-details-marker{display:none}
       </div>
       <div class="faq fade">
         <details open>
-          <summary>¿Qué sistema de tratamiento de agua necesito?</summary>
+          <summary>¿Cómo sé qué equipo de tratamiento de agua necesito?</summary>
           <div class="faq__a">
-            <p>Depende de las características del agua y de lo que quieras conseguir.</p>
-            <p>Si buscas agua tratada para beber y cocinar, puede interesarte un sistema de ósmosis inversa.</p>
-            <p>Si tu principal problema es la dureza del agua, quizá necesites un descalcificador.</p>
-            <p>En Activemur te ayudamos a conocer las diferencias y encontrar la solución adecuada.</p>
+            <p>No tienes que decidirlo por tu cuenta. Te escuchamos, estudiamos tus necesidades y te explicamos qué soluciones pueden encajar mejor.</p>
+            <p>Nuestro objetivo es recomendarte un equipo adecuado, no venderte el más caro.</p>
           </div>
         </details>
         <details>
-          <summary>¿Puedo ahorrar dinero instalando un sistema de ósmosis?</summary>
+          <summary>¿Qué ocurre si tengo un problema después de la instalación?</summary>
           <div class="faq__a">
-            <p>Si compras agua embotellada habitualmente, un equipo doméstico puede ayudarte a reducir ese gasto recurrente.</p>
-            <p>El ahorro dependerá del consumo, la inversión inicial y los costes de mantenimiento.</p>
-            <p>Te ayudaremos a valorar estos factores antes de decidir.</p>
+            <p>En Activemur seguimos a tu lado. Te facilitamos un teléfono de contacto para que puedas comunicar cualquier duda o incidencia.</p>
+            <p>Las condiciones de asistencia se explican al contratar.</p>
           </div>
         </details>
         <details>
-          <summary>¿Los equipos necesitan mantenimiento?</summary>
+          <summary>¿Tengo que acordarme de cuándo toca revisar mi equipo?</summary>
           <div class="faq__a">
-            <p>Sí. Cada tecnología tiene sus propias necesidades de mantenimiento.</p>
-            <p>Ofrecemos servicios de revisión y mantenimiento técnico para los equipos correspondientes, siguiendo sus características y recomendaciones de uso.</p>
+            <p>No. Te avisamos cuando corresponde realizar la revisión anual para que puedas mantener tu equipo en buenas condiciones.</p>
+            <p>Te explicaremos previamente las condiciones y costes del mantenimiento.</p>
           </div>
         </details>
         <details>
-          <summary>¿Puedo comprar definitivamente el equipo?</summary>
+          <summary>¿Puedo ahorrar dinero con un sistema de tratamiento de agua?</summary>
           <div class="faq__a">
-            <p>Sí. Disponemos de opciones de adquisición definitiva para determinados equipos.</p>
-            <p>Durante el asesoramiento te explicaremos las modalidades disponibles y sus condiciones.</p>
+            <p>Dependiendo de tus hábitos y necesidades, puedes reducir gastos relacionados con el agua embotellada o determinados problemas asociados a la cal.</p>
+            <p>El ahorro real depende del consumo, la instalación y los costes del equipo y su mantenimiento.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿También trabajáis con empresas?</summary>
+          <div class="faq__a">
+            <p>Sí. Aunque la mayoría de nuestros clientes son particulares, también ofrecemos soluciones de tratamiento de agua para empresas.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿En qué zonas ofrecéis vuestros servicios?</summary>
+          <div class="faq__a">
+            <p>Trabajamos principalmente en la Región de Murcia y también atendemos determinadas zonas de Alicante, Albacete, Almería y Valencia.</p>
+            <p>Consúltanos tu localidad para confirmar disponibilidad.</p>
           </div>
         </details>
       </div>
@@ -1106,29 +1115,35 @@ summary::-webkit-details-marker{display:none}
       <div class="cierre__grid">
         <div class="fade">
           <span class="eyebrow eyebrow--claro">07 — Únete al ahorro saludable</span>
-          <h2 class="h2" style="margin:.5em 0 .8em">Vas a beber agua durante toda tu vida. Preocúpate de que sea de calidad.</h2>
-          <p>Piénsalo.</p>
+          <h2 class="h2" style="margin:.5em 0 .8em">Tu agua merece una buena solución. Tú mereces una empresa que responda.</h2>
+          <div class="prosa" style="color:var(--band-body)">
+            <p>Puedes encontrar muchos equipos de tratamiento de agua.</p>
+            <p>Muchos modelos.</p>
+            <p>Muchas tecnologías.</p>
+            <p>Y muchos precios.</p>
+            <p>Pero hay algo que no aparece en las características técnicas de un producto:</p>
+            <p><strong style="color:#fff">La tranquilidad de saber que has elegido una empresa que no te va a dejar solo.</strong></p>
+          </div>
           <ul class="retorica">
-            <li>¿Cuántas garrafas has comprado este año?</li>
-            <li>¿Cuántas veces has tenido que cargarlas hasta casa?</li>
-            <li>¿Cuánto espacio ocupan?</li>
-            <li>¿Cuánto dinero destinas a ellas?</li>
-            <li>¿Y qué otras incomodidades relacionadas con el agua o el aire de tu hogar te gustaría resolver?</li>
+            <li>En Activemur llevamos 26 años demostrando que una buena relación con el cliente no termina con la instalación.</li>
+            <li>Empieza con un asesoramiento honesto.</li>
+            <li>Continúa con un trabajo profesional.</li>
+            <li>Y se mantiene con revisiones, atención y compromiso.</li>
           </ul>
-          <p>Quizá ha llegado el momento de buscar una alternativa.</p>
-          <p style="margin-top:.6em">Una solución adaptada a tus necesidades.</p>
-          <p>Que te aporte comodidad.</p>
-          <p>Que pueda ayudarte a reducir gastos recurrentes.</p>
-          <p>Y que cuente con el respaldo de profesionales con más de 25 años de experiencia.</p>
-          <h3 class="h3" style="color:#fff;margin:1.3em 0 .5em">No tienes que decidirlo solo.</h3>
-          <p>En Activemur te escuchamos, te explicamos las opciones y te ayudamos a encontrar la solución que mejor encaja contigo.</p>
-          <p class="cierre__slogan">Únete al ahorro saludable.</p>
+          <p>Queremos ayudarte a disfrutar del agua que necesitas, cuidar tu hogar y aprovechar las oportunidades de ahorro que mejor encajen con tu situación.</p>
+          <p>Sin promesas exageradas.</p>
+          <p>Sin venderte algo que no necesitas.</p>
+          <p>Y con profesionales que seguirán ahí cuando los necesites.</p>
+          <h3 class="h3" style="color:#fff;margin:1.3em 0 .5em">Únete al ahorro saludable.</h3>
+          <p style="font-weight:700;color:#fff">Descubre la tranquilidad de tener tu agua en buenas manos.</p>
+          <p class="cierre__slogan">Solicita asesoramiento</p>
           <div class="cierre__directo">
-            <a href="tel:+34968237316">968 23 73 16</a>
+            <a href="tel:+34968731716">968 23 73 16</a>
             <a href="tel:+34600505060">600 50 50 60</a>
             <a href="mailto:administracion@activemur.es">administracion@activemur.es</a>
           </div>
-          <p class="cierre__final">Activemur. Más de 25 años ofreciendo soluciones de tratamiento de agua y purificación del aire para hogares y empresas.</p>
+          <p style="color:var(--band-body);margin-top:1em">Te escuchamos, te orientamos y tú decides.</p>
+          <p class="cierre__final">Activemur. 26 años cuidando de ti y de tu agua.</p>
         </div>
 
         <div class="form fade">
@@ -1201,7 +1216,7 @@ summary::-webkit-details-marker{display:none}
         <span class="logo__mark"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c3.6 4.5 6 7.6 6 10.4A6 6 0 1 1 6 13.4C6 10.6 8.4 7.5 12 3z" fill="#fff"/></svg></span>
         <span><span class="logo__txt">activemur</span><span class="logo__tag">Únete al ahorro saludable</span></span>
       </a>
-      <p style="margin-top:1em">Más de 25 años ofreciendo soluciones de tratamiento de agua y purificación del aire para hogares y empresas.</p>
+      <p style="margin-top:1em">26 años cuidando de ti y de tu agua: tratamiento, instalación, revisiones y mantenimiento.</p>
       <p class="provisional">Versión provisional para revisión del cliente</p>
     </div>
     <div>
