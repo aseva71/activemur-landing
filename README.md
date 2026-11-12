@@ -145,7 +145,7 @@ pushados con el formato estándar de GTM.
 
 ## Cambios habituales
 
-- **Textos:** todo el copy está en `index.html`, en el orden de la página.
+- **Textos:** todo el copy está en `index.html`, en el orden de la página. La versión vigente es la del documento del cliente de **26 años** (`/opt/data/attachments/Contenido pegado (11-2.4 KB)`); se verifica con `node /opt/data/cache/scratch/copy-nuevo-verify.js` (138/144 frases exactas, las 6 restantes son formato de lista del documento).
 - **Quitar la nota «versión provisional»:** borrar el `<p class="provisional">` del footer.
 - **Fotos de producto:** sustituir los archivos de `public/media/` manteniendo el nombre.
 - **Colores:** variables CSS al principio del `<style>` (`--accent` es el verde-azulado).
